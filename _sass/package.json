@@ -1,0 +1,23 @@
+{
+  "name": "columbia-jekyll",
+  "version": "0.0.1",
+  "description": "personal site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "L. Gloege",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
+  "devDependencies": {
+    "jquery-easing": "0.0.1",
+    "normalize.css": "^7.0.0",
+    "susy": "^3.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,120 @@
+// UNIVERSAL
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.wrap::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.img-responsive {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0px;
+    padding-top: 1px;
+}
+
+p {
+    line-height: $p-line-height;
+    font-size: $p-font-size;
+    font-family: $p-font-family;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Gill Sans";
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+
+    &.scroll-link:hover,
+    &.scroll-link:active,
+    &.scroll-link.active {
+        color: #232554;
+    }
+}
+
+button {
+    background-color:$columbia;
+    box-shadow: none;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    border-color: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    box-shadow: none;
+    outline: 0;
+    border-color: transparent;
+    text-transform: uppercase;
+    font-family: "Gill Sans";
+    font-weight: 700;
+    color: #fff;
+    background-color: #4F8ABE;
+
+    @media only screen and (min-width: $break-point) {
+        display: inline-block;
+        width: auto;
+    }
+
+    &:focus,
+    &:active,
+    &.active,
+    &:active:focus {
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    &:hover,
+    &:active,
+    &.active{
+        box-shadow: none;
+        outline: 0;
+        border-color: transparent;
+        color: #fff;
+        background-color: #232554;
+    }
+
+    &.disabled{
+        box-shadow: none;
+        outline: 0;
+        border-color: transparent;
+        background-color: #999;
+    }
+    a {
+        background-color: transparent;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: inline-block;
+        font-size: 18px;
+        font-family: "Gill Sans";
+
+        &.scroll-link:hover,
+        &.scroll-link:active,
+        &.scroll-link.active{
+            color: $white;
+        }
+    }
+}

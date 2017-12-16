@@ -1,0 +1,41 @@
+/*
+* ==================================
+* Header Styles
+* ==================================
+*/
+
+footer {
+    text-align: center;
+    display: block;
+    margin: 0px 0px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+
+    .footer-left {
+        width: 100%;
+        text-align: center;
+        color: $columbia-dark;
+        font-size: 18px;
+
+        @media only screen and (min-width: 700px) {
+            width: span(6 of 12);
+            float: left;
+            margin: none;
+        }
+    }
+
+    .footer-right {
+        width: 100%;
+        text-align: center;
+        color: $columbia-dark;
+        font-size: 18px;
+
+        @media only screen and (min-width: 700px) {
+            width: span(6 of 12);
+            float: right;
+            margin: none;
+        }
+    }
+}

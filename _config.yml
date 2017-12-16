@@ -1,0 +1,28 @@
+# Site settings
+# Access via {{ site.title }}, {{ site.email }}, and so on.
+
+title: PhD Candidate
+email: gloege@ldeo.colubmia.edu
+description: ""
+baseurl: "/lgloege.github.io"
+url: "http://lgloege.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Sass settings
+sass:
+  sass_dir: _sass
+
+# Exclude from processing.
+# The following items will not be processed
+# exclude:
+#   - README.md
+#   - Gemfile
+#   - Gemfile.lock
+#   - package.json
+#   - package-lock.json
+#   - node_modules
+

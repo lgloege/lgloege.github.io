@@ -1,0 +1,143 @@
+/*
+* ==================================
+* Header Styles
+* ==================================
+*/
+
+header {
+    background-color: $bg-columbia;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    z-index: 2;
+    width: 100%; /* Full width */
+    height: $header-height;
+
+    @media only screen and (min-width: 500px) {
+        height: $header-height60;
+    }
+
+    @media only screen and (min-width: 700px) {
+        height: $header-height70;
+    }
+
+    p {
+        width: 30%;
+        height: $header-height;
+        margin-left: 1%;
+        float: left;
+        margin: 0;
+        padding: 0;
+        @include vertical-align(absolute);
+
+        @media only screen and (min-width: 700px) {
+            width: span(3 of 12);
+            margin-left: 0;
+        }
+
+        a {
+            color: #FFF;
+            font-family: $font-columbia;
+            font-size: 13pt;
+            margin: 0;
+            padding: 0;
+
+            @media only screen and (min-width: 700px) {
+                font-size: 18pt;
+            }
+        }
+    }
+
+    nav {
+        height: $header-height;
+        display: table;
+        width: 73%;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        float: right;
+        text-align: right;
+        list-style-position: inside;
+        padding: 0;
+
+        @media only screen and (min-width: 500px) {
+            height: $header-height60;
+        }
+
+        @media only screen and (min-width: 700px) {
+            height: $header-height70;
+            width: span(9 of 12);
+        }
+
+        ul {
+            display: block;
+            list-style-type: none;
+            overflow: hidden;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+
+            li {
+                display: inline-block;
+                padding: 0px 30px;
+                height: 100%;
+                float: right;
+                counter-increment: c -1;
+
+                @media only screen and (min-width: 500px) {
+                    padding: 0px 15px;
+                }
+
+                li:before {
+                  content: counter(c) ". ";
+                }
+                a {
+                    background-color: transparent;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: #FFF;
+                    display: inline-block;
+                    font-size: 18px;
+                    font-family: "Gill Sans";
+
+                    @media only screen and (min-width: 500px) {
+                        @include vertical-align(relative);
+                    }
+
+                    .nav-icon-label {
+                        display: none;
+                        font-size: 8pt;
+                        padding: 0px;
+                        margin: 0px;
+
+                        @media only screen and (min-width: 500px) {
+                            display: inline-block;
+                        }
+
+                        @media only screen and (min-width: 700px) {
+                            font-size: 12pt;
+                        }
+                    }
+
+                    .nav-icon {
+                        display: inline-block;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+
+                        @media only screen and (min-width: 500px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fa-bookmark, .fa-flask, .fa-film {
+    @include vertical-align(absolute);
+}

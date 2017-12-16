@@ -1,0 +1,105 @@
+/*
+* ==================================
+* Section Syles
+* ==================================
+*/
+
+.section-heading {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+  color: $text-dark;
+  text-align: center;
+}
+
+
+.subsection-heading {
+  font-size: 18pt;
+  color: $text-dark;
+}
+
+
+.research {
+  background-color: $bg-light;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .research-links {
+    text-align: center;
+  }
+
+  .research-item {
+    padding-top: 200px;
+
+    .research-body {
+
+        @media only screen and (min-width: 700px) {
+          width: span(8 of 12);
+          display: inline-block;
+          vertical-align: top;
+        }
+    }
+
+    .research-img {
+
+      @media only screen and (min-width: 700px) {
+        width: span(3 of 12);
+        vertical-align: top;
+        display: inline-block;
+        margin-right: gutter()/2;
+      }
+
+    img {
+
+      @media only screen and (min-width: 700px) {
+        display: block;
+        margin: none;
+      }
+    }
+    }
+  }
+}
+
+
+.publications {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  ol {
+    transform: rotate(180deg);
+    list-style-position: outside;
+    margin-left: 30px;
+
+    li {
+      transform: rotate(-180deg);
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+.movies {
+  background-color: $bg-light;
+  padding: 100px 0px;
+}
+
+
+/* Vimeo Styles */
+.vimeo-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+
+  @media only screen and (min-width: 700px) {
+    width: span(6 of 12);
+  }
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+  }
+}

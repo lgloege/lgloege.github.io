@@ -1,0 +1,14 @@
+/*
+* ==================================
+* Layouts
+* ==================================
+*/
+
+@media only screen and (min-width: 700px) {
+    $susy: (
+      'columns': susy-repeat(12),
+      'gutters': 0.25,
+      'spread': 'narrow',
+      'container-spread': 'narrow',
+    );
+}
