@@ -5,11 +5,15 @@
 */
 
 .hero {
-    margin-top: 100px;
-    margin-bottom: 200px;
+    margin-top: $header-height * 1.75;
+    padding-bottom: $header-height * 6;
+
+    @media only screen and (min-width: 500px) {
+        margin-top: $header-height60 * 1.75;
+    }
 
     @media only screen and (min-width: 700px) {
-        margin-top: 150px;
+        margin-top: $header-height70 * 1.75;
     }
 
     .hero-left {
@@ -63,11 +67,11 @@
             box-shadow:0;
             border-radius: 5px;
             display:block;
-            margin:0 auto;
+            margin: 0;
+            padding: 0;
             max-height: 90%;
             max-width: 90%;
             text-align: center;
-            @include centerer(true, false);
         }
 
         h2 {

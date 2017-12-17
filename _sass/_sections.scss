@@ -21,8 +21,16 @@
 
 .research {
   background-color: $bg-light;
-  padding-top: 100px;
+  padding-top: $header-height * 1.5;
   padding-bottom: 100px;
+
+  @media only screen and (min-width: 500px) {
+    padding-top: $header-height60 * 1.5;
+  }
+
+  @media only screen and (min-width: 700px) {
+    padding-top: $header-height70 * 1.5;
+  }
 
   .research-links {
     text-align: center;
@@ -62,8 +70,16 @@
 
 
 .publications {
-  padding-top: 100px;
+  padding-top: $header-height * 1.5;
   padding-bottom: 100px;
+
+  @media only screen and (min-width: 500px) {
+    padding-top: $header-height60 * 1.5;
+  }
+
+  @media only screen and (min-width: 700px) {
+    padding-top: $header-height70 * 1.5;
+  }
 
   ol {
     transform: rotate(180deg);
@@ -79,8 +95,19 @@
 
 
 .movies {
+  // padding-top: $header-height * 1.5;
   background-color: $bg-light;
-  padding: 100px 0px;
+  padding: ($header-height * 1.5) 0px;
+
+  @media only screen and (min-width: 500px) {
+    padding: ($header-height60 * 1.5) 0px;
+  }
+
+  @media only screen and (min-width: 700px) {
+    padding: ($header-height70 * 1.5) 0px;
+  }
+
+
 }
 
 
