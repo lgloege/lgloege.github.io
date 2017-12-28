@@ -6,15 +6,18 @@
 
 .hero {
     margin-top: $header-height * 1.75;
-    padding-bottom: $header-height * 6;
+    padding-bottom: $header-height;
 
     @media only screen and (min-width: 500px) {
         margin-top: $header-height60 * 1.75;
+        padding-bottom: $header-height60;
     }
 
     @media only screen and (min-width: 700px) {
         margin-top: $header-height70 * 1.75;
+        height: 100vh;
     }
+
 
     .hero-left {
         width: 100%;
@@ -79,6 +82,8 @@
             font-size:24pt;
             color: $text-dark;
             text-align: center;
+            martin-top: 50px;
+            margin-bottom: 12.5px;
         }
 
         h4 {
@@ -86,6 +91,8 @@
             font-size:18pt;
             color: $text-dark;
             text-align: center;
+            margin-top: 0px;
+            margin-bottom: 50px;
         }
     }
 }
