@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-
+    display: block;
     &.scroll-link:hover,
     &.scroll-link:active,
     &.scroll-link.active {
@@ -55,7 +55,7 @@ a {
 button {
     background-color:$columbia;
     box-shadow: none;
-    padding: 20px;
+    // padding: 20px;
     font-size: 16px;
     border: none;
     border-color: none;
@@ -110,11 +110,21 @@ button {
         display: inline-block;
         font-size: 18px;
         font-family: "Gill Sans";
+        position: relative;
+        padding: 20px;
 
         &.scroll-link:hover,
         &.scroll-link:active,
         &.scroll-link.active{
             color: $white;
+        }
+
+        &.after{
+            content:"";
+            padding: 50px;
+            position: absolute;
+            left: -25px;
+            top: -25px;
         }
     }
 }
