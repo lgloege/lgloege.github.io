@@ -3,7 +3,7 @@
     <div class='wrap'>
         <!-- LEFT -->
         <div align=center class='hero-left'>
-            <img src="img/profilePics/ortonville.jpg"
+            <img src="{{site.data.hero.profile}}"
             class="img-responsive img-thumbnail "
             alt="Luke Gloege"\>
 
@@ -33,14 +33,14 @@
                 <img src="./img/logos/LamontLogo_trans.png"\>
             <!-- </div> -->
             <!-- BRIEF DESCRIPTION-->
-            <h2 class='hero-name'>Luke Gloege</h2>
-            <h4 class='hero-status'>Ph.D Candidate  /  Ecosystem Modeler</h4>
-
+            <h2 class='hero-name'>{{site.data.hero.name}}</h2>
+            <h4 class='hero-status'>{{site.data.hero.status}}</h4>
+<!-- Ph.D Candidate  /  Ecosystem Modeler-->
             <!-- BUTTONS -->
             <div style='text-align: center;' role="naviation">
             <button ><a href="#research" class="scroll-link page-scroll">Research</a></button>
             <button ><a href="#publications" class="scroll-link page-scroll">Publications</a></button>
-            <button ><a href='./files/CV_20180419.pdf'>CV</a></button>
+            <button ><a href='{{site.data.hero.cv}}'>CV</a></button>
             </div>
         </div>
     </div>
