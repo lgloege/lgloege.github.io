@@ -4,7 +4,7 @@
             <div class='wrap'>
             <h1 class='section-heading'>Research</h1>
             <p>
-                My research focuses on understanding how carbon and nutrients move around in large water bodies. I am interested in how biology and physics mediate this transport. By understanding the dominant mechanisms moving nutrients around we gain insight into how the ecosystem and climate change over time. Tools I use include: 3D computer models, in-situ observations, and satellite data.
+                {{site.data.research.description}}
             </p>
 
             <!-- BUTTONS -->
@@ -17,145 +17,24 @@
         </div>
         </div> <!-- End wrap -->
 
-    <!-- Research : BCP -->
-    <div id='bcp' class='research-item'>
-        <div class='wrap'>
-        <!-- Teaser image -->
-        <figure class="research-img">
-            <img class="img-responsive" src="img/figsBCP/poc_depth.png" >
-        </figure>
-
-        <!-- RESEARCH - BCP description -->
-        <div class="research-body">
-            <h2  class='subsection-heading'>Biological Carbon Pump</h2>
-
-                                       <!-- Image description -->
-            <!--
-            <p >
-                The figure shows POC flux from moored sites around the globe. POC sequestered below 1000 m will not see the atmosphere for at least 100 years. I am interested in how this POC flux is paramterized in computer models and understanding the mechanisms that are important on a global scale.
-            </p>
-            -->
-            <p >
-                The shunt of photosynthetically derived particulate organic carbon (POC)
-                out of the surface ocean is an integral component of the “biological pump.”
-                POC raining through the deep ocean
-                is remineralized back to dissolved inorganic carbon though microbial respiration.
-                This work has implications for understanding how the climate and ecosystem services will change in the future.
-            </p>
-        </div> <!-- END RESERACH BODY -->
-    </div> <!-- END WRAP -->
-    </div><!-- END RESERACH ITEM -->
-
-
-    <!-- RESEARCH : LAKE MICHIGAN -->
-    <div id='lm'  class="research-item" >
-        <div class='wrap'>
-            <!-- RESEARCH IMAGE -->
+    {% for item in {{site.data.research.research}} %}
+        <div id='{{item.id}}' class='research-item'>
+            <div class='wrap'>
+            <!-- Teaser image -->
             <figure class="research-img">
-                <img class="img-responsive" src="img/figsLM/Figure_1.pdf" >
+                <img class="img-responsive" src={{item.figure}} >
             </figure>
 
+            <!-- RESEARCH description-->
             <div class="research-body">
-                <h2 class='subsection-heading'>Lake Michigan</h2>
-
-                <!-- IMAGE CAPTION -->
-                <!--
-                <p>
-                    The figure shows output from a computer model where a time
-                    varying dye release was simulated.
-                    A concentration of 1 is equivalent to the dye being
-                    well-mixed throughout the entire basin. Each river has a dramatically
-                    different footprint, look at how the St. Joseph stays coastal!
-                </p>
-                -->
-
+                <h2  class='subsection-heading'>{{item.title}}</h2>
                 <p >
-                    Nutrient and total suspended solids (TSS)
-                    loading are two stressors that degrade Great Lakes coastal
-                    ecosystems and the services they provide, such as drinking water,
-                    fisheries, and recreational opportunities. High nutrient
-                    inputs from urban and agricultural runoff continue to cause
-                    local eutrophication. A recent survey of Lake Michigan
-                    tributaries shows summer nutrient loads spanning three
-                    orders of magnitude, with higher values in regions dominated
-                    by agricultural and urban land use type. Understanding in more
-                    detail how vertical stratification and coastal circulation impacts the
-                    redistribution of tributary inputs in the coastal zone of
-                    Lake Michigan is imperative. This is a first step in understanding how tributary
-                    load redistributions are impacted by the hydrodynamics
-                    of the coastal zone.  This work has implications in
-                    assessing how management efforts
-                    could be better targeted to protect the coastal zone.
+                    {{item.description}}
                 </p>
-            </div> <!-- RESEACH BODY-->
+            </div> <!-- END RESERACH BODY -->
+            </div> <!-- END WRAP -->
+        </div><!-- END RESERACH ITEM -->
+    {% endfor %}
 
-        </div> <!-- END WRAP -->
-        </div> <!-- END RESEARCH ITEM -->
-
-<!-- RESEARCH : LAKE MICHIGAN -->
-    <div id='pco2'  class="research-item" >
-        <div class='wrap'>
-            <!-- RESEARCH IMAGE -->
-            <figure class="research-img">
-                <img class="img-responsive" src="img/figsPCO2/socat.png" >
-            </figure>
-        <div class="research-body">
-                <h2 class='subsection-heading'>pCO2 gap filling</h2>
-
-                <!-- IMAGE CAPTION -->
-                <!--
-                <p>
-                    The figure shows output from a computer model where a time
-                    varying dye release was simulated.
-                    A concentration of 1 is equivalent to the dye being
-                    well-mixed throughout the entire basin. Each river has a dramatically
-                    different footprint, look at how the St. Joseph stays coastal!
-                </p>
-                -->
-
-                <p >
-                The ocean serves an important ecosystem service by reducing the impact of human derived
-                carbon dioxide emissions. Quantifying how much carbon the ocean uptakes is difficult
-                since there are gaps in the ocean pCO2 data record.
-                Methods have been developed to fill in these gaps but the methods produce different results and it is unclear which method is correct, which is essential to determine which
-                mapping methods can be used in global carbon budget assessments.
-                A more accurate global carbon budget will help to assess whether the goals of the
-                UNFCC Paris climate agreement are being achieved.
-                </p>
-
-            </div> <!-- RESEACH BODY-->
-        </div> <!-- END WRAP -->
-        </div> <!-- END RESEARCH ITEM -->
-<!--
-    <!- - RESEARCH : Neural Networks - ->
-    <div id='lm'  class="research-item" >
-        <div class='wrap'>
-            <!- - RESEARCH IMAGE - ->
-            <figure class="research-img">
-                <img class="img-responsive" src="img/socat.png" >
-            </figure>
-
-            <div class="research-body">
-                <h2 class='subsection-heading'>Ocean pCO2</h2>
-
-                <!- - IMAGE CAPTION - ->
-                <p>
-                    The figure shows output from a computer model where a time
-                    varying dye release was simulated.
-                    A concentration of 1 is equivalent to the dye being
-                    well-mixed throughout the entire basin. Each river has a dramatically
-                    different footprint, look at how the St. Joseph stays coastal!
-                </p>
-
-                <p >
-                    I evaluate methods to fill gaps in SOCAT observations
-                    In the process of developing neural network to
-                    fill in gaps
-                </p>
-            </div> <!- - RESEACH BODY- ->
-        </div> <!- - END WRAP - ->
-        </div> <!- - END RESEARCH ITEM - ->
--->
-    </div> <!-- END RESEARCH SECTION -->
 </section>
 

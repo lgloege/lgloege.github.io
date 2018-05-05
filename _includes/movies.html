@@ -3,13 +3,10 @@
     <div class='wrap'>
         <h1 class='section-heading'>Movies</h1>
 
+            {% for video in {{site.data.movies.movies}} %}
             <div class="vimeo-wrapper">
-                <iframe src="https://player.vimeo.com/video/227314903" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="{{video}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-
-            <div class="vimeo-wrapper">
-                <iframe src="https://player.vimeo.com/video/214928932" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-
+            {% endfor %}
     </div>
 </section>

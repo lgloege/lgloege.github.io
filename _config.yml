@@ -1,18 +1,23 @@
-# Site settings
-# Access via {{ site.title }}, {{ site.email }}, and so on.
+---
+### Site settings
+### Access via {{ site.title }}, {{ site.email }}, and so on.
 
-title: PhD Candidate
-email: gloege@ldeo.colubmia.edu
+### Site variables
+title: L. Gloege
+name: Luke Gloege
+email: gloege@ldeo.columbia.edu
+github: https://github.com/lgloege
+vimeo: https://vimeo.com/user64960926
 description: ""
 baseurl: "/lgloege.github.io"
 url: "http://lgloege.github.io"
 
-# Build settings
+### Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
 
-# Sass settings
+### Sass settings
 sass:
   sass_dir: _sass
 
@@ -25,4 +30,4 @@ sass:
 #   - package.json
 #   - package-lock.json
 #   - node_modules
-
+---

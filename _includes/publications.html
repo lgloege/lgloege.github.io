@@ -2,117 +2,41 @@
 <section class="publications" id='publications'>
     <div class='wrap'>
         <h1 class='section-heading'>Publications</h1>
+
         <!-- IN PROGRESS -->
         <h2 class='subsection-heading'> In prep.</h2>
         <ol>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley, R. Mooney, J. David Allan, M. Diebel, P.B. McIntyre,
-            Potential impacts of tributary loads on coastal ecosystem services in Lake Michigan ,
-            <i>Nature Sustainability,</i> in prep.
-            </span>
-            </li>
+            {% for publication in {{site.data.publications.progress}} %}
+                <li>
+                <span id="gloegeGBC2017">
+                    {{publication}}
+                </span>
+                </li>
+            {% endfor %}
         </ol>
 
-        <!-- IN PRESS -->
+        <!-- PUBLISHED -->
         <h2 class='subsection-heading'>In press / Published</h2>
         <ol >
-            <li>
-            <span id="gloegeGBC2017">
-            Mouw, C.B., A. Barnett,  G.A. McKinley, <b>L. Gloege</b>, D.J. Pilcher (2016)
-            Phytoplankton size impact on export flux in the global ocean,
-            <i>
-            Global Biogeochem. Cycles, 30,</i>
-            <a href="http://onlinelibrary.wiley.com/doi/10.1002/2015GB005355/abstract"> doi:10.1002/2015GB005355.
-            </a>
-            </span>
-            </li>
-
-            <li>
-            <span id="gloegeGBC2017">
-            Mouw, C.B., A. Barnett,  G.A. McKinley, <b>L. Gloege</b>, D.J. Pilcher (2016)
-            Global ocean particulate organic carbon flux merged with satellite parameters,
-            <i>Earth Syst. Sci. Data, 8, </i> 531-541,
-            <a href="http://www.earth-syst-sci-data.net/8/531/2016/">doi:10.5194/essd-8-531-2016.
-            </a>
-            </span>
-            </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley, C.B. Mouw, A. Barnett (2017)
-            Global evaluation of particulate organic carbon flux parameterizations and implications for atmospheric pCO<sub>2</sub>,
-            <i>Global Biogeochem. Cycles, 31, </i> <a href="http://onlinelibrary.wiley.com/doi/10.1002/2016GB005535/full">doi:10.1002/2016GB005535. </a>.
-            </span>
-            </li>
+            {% for publication in {{site.data.publications.published}} %}
+                <li>
+                <span id="gloegeGBC2017">
+                    {{publication}}
+                </span>
+                </li>
+            {% endfor %}
         </ol>
 
         <!-- CONFERENCES -->
         <h2 class='subsection-heading'>Conferences</h2>
         <ol >
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b> and J. Austin. (2013, June).
-            Modeling Near-Inertial Waves in Lake Superior,
-            presented at 56th annual International Association Great Lakes Research conference, Purdue, IN
-            </span>
-            </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley,
-            C.B. Mouw, A. Ciochetto. (2016, February)
-            A Global Evaluation of
-            Model Parameterizations for
-            Carbon Export and Remineralization,
-            presnted at Ocean Science Meeting 2016, New Orleans, LA
-            </span>
-            </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley,
-            C.B. Mouw, A. Ciochetto. (2016, June)
-            Parameterizing Carbon Export Below the Euphotic Zone,
-            presnted at the first Gordon Research Conference on Ocean Biogeochemistry, Hong Kong, China <br> (Acknowledged for excellent student poster presentation)
-            </span>
-            </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley, P. McIntyre, R. Mooney. (2017, April)
-            Fate of Tributary Loads to Lake Michigan,
-            presented at 2017 Climate Change Symposium / Reid Bryson Poster Competiation Madison, WI <br> (Awarded Reid Bryson scholarship)
-            </span>
-            </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley, P. McIntyre, R. Mooney. (2017, May)
-            Fate of Tributary Loads to Lake Michigan,
-            presented at 60th annual International Association Great Lakes Research conference, Detroit, MI
-            </span>
-             </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley,
-            C.B. Mouw, A. Ciochetto. (2017, August)
-            Constraining the Potential Influence of the Ocean Biological Pump on Atmospheric pCO2,
-            presented at the 10th International Carbon Dioxide Conference, Interlaken, Switzerland
-            </span>
-            </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley,
-            P.B McIntyre, R.J. Mooney, J. David Allan, M. Diebel (2018, February)
-            Potential impacts of tributary loads on coastal ecosystem services in Lake Michigan,
-            presented at Ocean Sciences 2018, Portland, Oregon
-            </span>
-            </li>
-            <li>
-            <span id="gloegeGBC2017">
-            <b> Gloege, L.</b>, G.A. McKinley,
-            P.B McIntyre, R.J. Mooney, J. David Allan, M. Diebel (2018, May)
-            Potential impacts of tributary loads on coastal ecosystem services in Lake Michigan,
-            to be presented at Society for Freshwater Science annual meeting, Detroit, Michigan
-            </span>
-            </li>
-
+            {% for conference in {{site.data.publications.conference}} %}
+                <li>
+                <span id="gloegeGBC2017">
+                    {{conference}}
+                </span>
+                </li>
+            {% endfor %}
         </ol>
 
     </div>

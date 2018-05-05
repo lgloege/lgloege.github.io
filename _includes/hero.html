@@ -5,23 +5,23 @@
         <div align=center class='hero-left'>
             <img src="{{site.data.hero.profile}}"
             class="img-responsive img-thumbnail "
-            alt="Luke Gloege"\>
+            alt="{{site.name}}"\>
 
             <!-- Social Media -->
             <br><br>
             <ul>
                 <li>
-                    <a class="mail" href="mailto:gloege@ldeo.columbia.edu">
+                    <a class="mail" href="mailto:{{site.email}}">
                         <i class="fa fa-envelope fa-3x"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="github" href="https://github.com/lgloege">
+                    <a class="github" href="{{site.github}}">
                         <i class="fab fa-github fa-3x"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="vimeo" href="https://vimeo.com/user64960926">
+                    <a class="vimeo" href="{{site.vimeo}}">
                         <i class="fab fa-vimeo fa-3x"></i>
                     </a>
                 </li>
@@ -30,12 +30,13 @@
 
         <div align=center class='hero-right'>
             <!-- <div style='text-align: center;'> -->
-                <img src="./img/logos/LamontLogo_trans.png"\>
+                <img src="{{site.data.hero.universityLogo}}"\>
             <!-- </div> -->
+
             <!-- BRIEF DESCRIPTION-->
-            <h2 class='hero-name'>{{site.data.hero.name}}</h2>
+            <h2 class='hero-name'> {{site.name}}</h2>
             <h4 class='hero-status'>{{site.data.hero.status}}</h4>
-<!-- Ph.D Candidate  /  Ecosystem Modeler-->
+
             <!-- BUTTONS -->
             <div style='text-align: center;' role="naviation">
             <button ><a href="#research" class="scroll-link page-scroll">Research</a></button>
