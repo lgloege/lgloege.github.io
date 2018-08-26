@@ -9,8 +9,8 @@ email: gloege@ldeo.columbia.edu
 github: https://github.com/lgloege
 vimeo: https://vimeo.com/user64960926
 description: ""
-baseurl: "/lgloege.github.io"
-url: "http://lgloege.github.io"
+#baseurl: "/lgloege.github.io"
+#url: "http://lgloege.github.io"
 
 ### Build settings
 markdown: kramdown
