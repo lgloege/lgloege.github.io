@@ -5,9 +5,12 @@
 */
 
 .hero {
-    margin-top: $header-height * 1.75;
+    margin-top: $header-height* 1.75;
     padding-bottom: $header-height;
-
+    /*
+    background: url('../img/blue_heron.jpeg');
+    background-size: contain;
+    */
     @media only screen and (min-width: 500px) {
         margin-top: $header-height60 * 1.75;
         padding-bottom: $header-height60;

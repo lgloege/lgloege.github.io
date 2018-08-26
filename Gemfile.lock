@@ -3,7 +3,18 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    bibtex-ruby (4.4.6)
+      latex-decode (~> 0.0)
+    citeproc (1.0.9)
+      namae (~> 1.0)
+    citeproc-ruby (1.1.10)
+      citeproc (~> 1.0, >= 1.0.9)
+      csl (~> 1.5)
     colorator (1.1.0)
+    csl (1.5.0)
+      namae (~> 1.0)
+    csl-styles (1.0.1.8)
+      csl (~> 1.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
     jekyll (3.6.2)
@@ -21,15 +32,22 @@ GEM
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
+    jekyll-scholar (5.13.0)
+      bibtex-ruby (~> 4.0, >= 4.0.13)
+      citeproc-ruby (~> 1.0)
+      csl-styles (~> 1.0)
+      jekyll (~> 3.0)
     jekyll-watch (1.5.1)
       listen (~> 3.0)
     kramdown (1.16.2)
+    latex-decode (0.3.1)
     liquid (4.0.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
+    namae (1.0.1)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
@@ -44,6 +62,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    unicode_utils (1.4.0)
 
 PLATFORMS
   ruby
@@ -51,7 +70,8 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.6.2)
   jekyll-feed (~> 0.6)
-  tzinfo-data
+  jekyll-scholar
+  unicode_utils
 
 BUNDLED WITH
    1.16.0

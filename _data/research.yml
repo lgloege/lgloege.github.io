@@ -62,7 +62,7 @@ research:
       mapping methods can be used in global carbon budget assessments.
       A more accurate global carbon budget will help to assess whether the goals of the
       UNFCC Paris climate agreement are being achieved.
-    figure: "img/figsPCO2/socat.png"
+    figure: "img/SOCATv5_1982-2016_mean.pdf"
     figureCap: >
       The figure shows output from a computer model where a time
       varying dye release was simulated.

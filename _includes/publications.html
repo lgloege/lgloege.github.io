@@ -5,39 +5,14 @@
 
         <!-- IN PROGRESS -->
         <h2 class='subsection-heading'> In prep.</h2>
-        <ol>
-            {% for publication in {{site.data.publications.progress}} %}
-                <li>
-                <span id="gloegeGBC2017">
-                    {{publication}}
-                </span>
-                </li>
-            {% endfor %}
-        </ol>
+        {% bibliography --query @unpublished %}
 
         <!-- PUBLISHED -->
         <h2 class='subsection-heading'>In press / Published</h2>
-        <ol >
-            {% for publication in {{site.data.publications.published}} %}
-                <li>
-                <span id="gloegeGBC2017">
-                    {{publication}}
-                </span>
-                </li>
-            {% endfor %}
-        </ol>
+        {% bibliography --query @article %}
 
         <!-- CONFERENCES -->
         <h2 class='subsection-heading'>Conferences</h2>
-        <ol >
-            {% for conference in {{site.data.publications.conference}} %}
-                <li>
-                <span id="gloegeGBC2017">
-                    {{conference}}
-                </span>
-                </li>
-            {% endfor %}
-        </ol>
-
+        {% bibliography --query @conference %}
     </div>
 </section>
