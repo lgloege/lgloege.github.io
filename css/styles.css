@@ -1,0 +1,177 @@
+/* ================================== Variables ================================== */
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.wrap { width: 90%; margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px; }
+
+.wrap::after { content: " "; display: block; clear: both; }
+
+.img-responsive { display: inline-block; max-width: 100%; height: auto; }
+
+body { margin: 0px; padding-top: 1px; }
+
+p { line-height: 1.75; font-size: 18px; font-family: "EB Garamond", serif; text-align: justify; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Gill Sans"; font-weight: 700; }
+
+a { text-decoration: none; display: block; }
+
+a.scroll-link:hover, a.scroll-link:active, a.scroll-link.active { color: #232554; }
+
+button { background-color: #4F8ABE; box-shadow: none; font-size: 16px; border: none; border-color: none; display: block; width: 100%; margin-bottom: 2px; box-shadow: none; outline: 0; border-color: transparent; text-transform: uppercase; font-family: "Gill Sans"; font-weight: 700; color: #fff; background-color: #4F8ABE; }
+
+@media only screen and (min-width: 500px) { button { display: inline-block; width: auto; } }
+
+button:focus, button:active, button.active, button:active:focus { box-shadow: none; border-color: transparent; }
+
+button:hover, button:active, button.active { box-shadow: none; outline: 0; border-color: transparent; color: #fff; background-color: #232554; }
+
+button.disabled { box-shadow: none; outline: 0; border-color: transparent; background-color: #999; }
+
+button a { background-color: transparent; color: #FFFFFF; text-decoration: none; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; display: inline-block; font-size: 18px; font-family: "Gill Sans"; position: relative; padding: 20px; }
+
+button a.scroll-link:hover, button a.scroll-link:active, button a.scroll-link.active { color: #FFFFFF; }
+
+button a.after { content: ""; padding: 50px; position: absolute; left: -25px; top: -25px; }
+
+/* ================================== Layouts ================================== */
+/* ================================== Header Styles ================================== */
+header { background-color: #4F8ABE; position: fixed; /* Set the navbar to fixed position */ top: 0; /* Position the navbar at the top of the page */ z-index: 2; width: 100%; /* Full width */ height: 30px; }
+
+@media only screen and (min-width: 500px) { header { height: 60px; } }
+
+@media only screen and (min-width: 700px) { header { height: 70px; } }
+
+header p { width: 30%; height: 30px; margin-left: 1%; float: left; margin: 0; padding: 0; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+
+@media only screen and (min-width: 700px) { header p { width: 23.7288135593%; margin-left: 0; } }
+
+header p a { color: #FFF; font-family: "Cinzel", serif; font-size: 13pt; margin: 0; padding: 0; }
+
+@media only screen and (min-width: 700px) { header p a { font-size: 18pt; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); } }
+
+header nav { height: 30px; display: table; width: 73%; margin: 0 0 0 0; padding: 0 0 0 0; float: right; text-align: right; list-style-position: inside; padding: 0; }
+
+@media only screen and (min-width: 500px) { header nav { height: 60px; } }
+
+@media only screen and (min-width: 700px) { header nav { height: 70px; width: 74.5762711864%; } }
+
+header nav ul { display: block; list-style-type: none; overflow: hidden; text-align: center; margin: 0; padding: 0; height: 100%; width: 100%; }
+
+header nav ul li { display: inline-block; padding: 0px 30px; height: 100%; float: right; counter-increment: c -1; }
+
+@media only screen and (min-width: 500px) { header nav ul li { padding: 0px 15px; } }
+
+header nav ul li li:before { content: counter(c) ". "; }
+
+header nav ul li a { background-color: transparent; text-decoration: none; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; color: #FFF; display: inline-block; font-size: 18px; font-family: "Gill Sans"; }
+
+@media only screen and (min-width: 500px) { header nav ul li a { position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); } }
+
+header nav ul li a .nav-icon-label { display: none; font-size: 8pt; padding: 0px; margin: 0px; }
+
+@media only screen and (min-width: 500px) { header nav ul li a .nav-icon-label { display: inline-block; } }
+
+@media only screen and (min-width: 700px) { header nav ul li a .nav-icon-label { font-size: 12pt; } }
+
+header nav ul li a .nav-icon { display: inline-block; margin: 0; padding: 0; text-align: center; }
+
+@media only screen and (min-width: 500px) { header nav ul li a .nav-icon { display: none; } }
+
+.fa-bookmark, .fa-flask, .fa-film { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+
+/* ================================== Hero Styles ================================== */
+.hero { margin-top: 52.5px; padding-bottom: 30px; /* background: url('../img/blue_heron.jpeg'); background-size: contain; */ }
+
+@media only screen and (min-width: 500px) { .hero { margin-top: 105px; padding-bottom: 60px; } }
+
+@media only screen and (min-width: 700px) { .hero { margin-top: 122.5px; height: 100vh; } }
+
+.hero .hero-left { width: 100%; }
+
+@media only screen and (min-width: 700px) { .hero .hero-left { width: 32.2033898305%; float: left; } }
+
+.hero .hero-left ul { display: block; list-style: none; text-align: center; margin: 0; padding: 0; }
+
+.hero .hero-left ul li { display: inline-block; padding: 0px 10px; height: 100%; }
+
+.hero .hero-left ul li a { text-align: center; }
+
+.hero .hero-left ul li a.mail, .hero .hero-left ul li a.github, .hero .hero-left ul li a.vimeo { color: #4F8ABE; text-decoration: none; text-align: center; }
+
+.hero .hero-left ul li a.mail:hover, .hero .hero-left ul li a.github:hover, .hero .hero-left ul li a.vimeo:hover { color: #232554; text-decoration: none; }
+
+.hero .hero-right { width: 100%; }
+
+@media only screen and (min-width: 700px) { .hero .hero-right { width: 66.1016949153%; float: right; } }
+
+.hero .hero-right img { border: 0; box-shadow: 0; border-radius: 5px; display: block; margin: 0; padding: 0; max-height: 90%; max-width: 90%; text-align: center; }
+
+.hero .hero-right h2 { font-family: "Cinzel", serif; font-size: 24pt; color: #232554; text-align: center; martin-top: 50px; margin-bottom: 12.5px; }
+
+.hero .hero-right h4 { font-family: "Cinzel", serif; font-size: 18pt; color: #232554; text-align: center; margin-top: 0px; margin-bottom: 50px; }
+
+.img-thumbnail { border: 0; box-shadow: 0; border-radius: 5px; }
+
+/* ================================== Section Syles ================================== */
+.section-heading { margin-top: 0; margin-bottom: 15px; font-size: 40px; color: #232554; text-align: center; }
+
+.subsection-heading { font-size: 18pt; color: #232554; }
+
+.research { background-color: #EAEAEA; padding-top: 30px; padding-bottom: 30px; }
+
+@media only screen and (min-width: 500px) { .research { padding-top: 60px; padding-bottom: 60px; } }
+
+@media only screen and (min-width: 700px) { .research { padding-top: 70px; padding-bottom: 70px; } }
+
+.research .research-links { text-align: center; }
+
+.research .research-item { padding-top: 45px; }
+
+@media only screen and (min-width: 500px) { .research .research-item { padding-top: 90px; } }
+
+@media only screen and (min-width: 700px) { .research .research-item { padding-top: 105px; } }
+
+@media only screen and (min-width: 700px) { .research .research-item .research-body { width: 66.1016949153%; display: inline-block; vertical-align: top; } }
+
+@media only screen and (min-width: 700px) { .research .research-item .research-img { width: 23.7288135593%; vertical-align: top; display: inline-block; margin-right: 2.6315789474%; } }
+
+@media only screen and (min-width: 700px) { .research .research-item .research-img img { display: block; margin: none; } }
+
+.publications { padding-top: 45px; padding-bottom: 30px; }
+
+@media only screen and (min-width: 500px) { .publications { padding-top: 60px; padding-bottom: 60px; } }
+
+@media only screen and (min-width: 700px) { .publications { padding-top: 70px; padding-bottom: 70px; } }
+
+.publications ol { transform: rotate(180deg); list-style-position: outside; margin-left: 30px; }
+
+.publications ol li { transform: rotate(-180deg); margin-bottom: 15px; }
+
+.movies { background-color: #EAEAEA; padding-top: 30px; padding-bottom: 30px; }
+
+@media only screen and (min-width: 500px) { .movies { padding-top: 60px; padding-bottom: 60px; } }
+
+@media only screen and (min-width: 700px) { .movies { padding-top: 70px; padding-bottom: 70px; } }
+
+.vimeo-wrapper { display: inline-block; position: relative; width: 100%; height: 0; padding-bottom: 50%; }
+
+@media only screen and (min-width: 700px) { .vimeo-wrapper { width: 49.1525423729%; } }
+
+.vimeo-wrapper iframe { position: absolute; width: 100%; height: 100%; left: 0; top: 0; }
+
+/* ================================== Header Styles ================================== */
+footer { text-align: center; display: block; margin: 0 0px; padding: 15px 0; box-sizing: border-box; position: relative; width: 100%; }
+
+@media only screen and (min-width: 500px) { footer { padding: 30px 0; } }
+
+@media only screen and (min-width: 700px) { footer { padding: 30px 0; } }
+
+footer .footer-left { width: 100%; text-align: center; color: #232554; font-size: 18px; }
+
+@media only screen and (min-width: 700px) { footer .footer-left { width: 49.1525423729%; float: left; text-align: left; margin: none; } }
+
+footer .footer-right { width: 100%; text-align: center; color: #232554; font-size: 18px; }
+
+@media only screen and (min-width: 700px) { footer .footer-right { width: 49.1525423729%; float: right; text-align: right; margin: none; } }
+
+/*# sourceMappingURL=styles.css.map */
