@@ -1,0 +1,651 @@
+body {
+  margin: 0; /* makes content flushagain edge*/
+  font-family: "source sans pro", sans-serif; /* find fonts here https://fonts.google.com/ */
+  height: 100%;
+  width: 100%;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* ---------------------------------------------- */
+/* hamburger menu                                 */
+/*  https://www.youtube.com/watch?v=dIyVTjJAkLw   */
+/* ---------------------------------------------- */
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /*order: 3px solid black;*/
+}
+
+.menu-btn-hamburger {
+  width: 40px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-hamburger::before,
+.menu-btn-hamburger::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  /*box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);*/
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-hamburger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn-hamburger::after {
+  transform: translateY(16px);
+}
+
+/* hamburger animation */
+.menu-btn.open .menu-btn-hamburger {
+  /*transform: translateX(-50px);*/
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn-hamburger::before {
+  transform: rotate(45deg); /*translate(35px, -35px);*/
+}
+
+.menu-btn.open .menu-btn-hamburger::after {
+  transform: rotate(-45deg); /*translate(35px, 35px);*/
+}
+
+/* ----------------------- */
+/* header and nav styleing */
+/* ----------------------- */
+.header {
+  padding: 0px 45px 0px 45px; /* padding on top, right, bottom, left*/
+  /*background-color: #9e9e9e;*/
+  background-color: #424242;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* flexbox: look at links in here 
+  https://www.youtube.com/watch?v=DJq6R2b0FoE&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&index=3 
+  */
+  display: grid; /* flex aligns direct children on single line*/
+  grid-template-columns: repeat(1fr, minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.header h1 {
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: normal;
+}
+
+.header-inner {
+  max-width: 1100px;
+  /*border-bottom: 5px solid #f88c00;*/
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: flex;
+  justify-content: space-between; /* controls horizontal alignment */
+  align-items: center; /* controls vertical alignment */
+  flex-wrap: wrap;
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.nav li {
+  margin-left: 20px; /* puts some space bewteen list items*/
+  font-size: 1.25rem;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block; /* display block necessary for transofrm https://www.w3schools.com/cssref/pr_class_display.asp */
+  transition: all 0.3s ease-out; /* transition properies https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
+}
+
+/* styles when element is hovered */
+.nav a:hover {
+  color: #c5cae9;
+  transform: rotate(
+    6deg
+  ); /* rotate/scale/skew items https://developer.mozilla.org/en-US/docs/Web/CSS/transform*/
+}
+
+/* ----------------------- */
+/* button styleing */
+/* ----------------------- */
+.button {
+  background-color: #3949ab;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.18rem;
+  display: inline-block; /* respond to vertical element on neightbor, but not take full width*/
+}
+
+/* -------------------- */
+/* hero styleing        */
+/* -------------------- */
+.hero {
+  background-color: #eceff1;
+  padding: 120px 45px 0px 45px;
+  /* display: flex; */
+  justify-content: center;
+
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+/* style content inside hero*/
+.hero-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-item {
+}
+
+.hero h1 {
+  font-weight: normal;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero h2 {
+  font-family: "oswald", sans-serif;
+  font-weight: normal;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero h4 {
+  font-family: "oswald", sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
+}
+.hero p {
+  font-size: 1.18rem;
+  line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.hero-item img {
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-height: 90%;
+  max-width: 90%;
+  text-align: center;
+}
+
+.hero-item .hero-img {
+  display: inline;
+  border-radius: 2%;
+}
+
+.under-construction p {
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* -------------------- */
+/* education styling    */
+/* -------------------- */
+.education {
+  background-color: #eceff1;
+  padding: 60px 45px;
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+.education-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+}
+
+.education-inner-grid {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.education-item {
+  margin-bottom: 45px;
+}
+.education h1 {
+}
+
+.education-item h2 {
+  /*color: #283593;*/
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+  margin: 0;
+}
+
+.education-item h3 {
+  /*color: #283593;*/
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 0.25rem;
+  margin: 0;
+}
+
+.education-item h4 {
+  /*color: #283593;*/
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.education-item p {
+  /*color: #283593;*/
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding-bottom: 0.25rem;
+  margin: 0;
+  text-align: justify;
+}
+
+#attended {
+  padding-top: 1rem;
+}
+/* -------------------- */
+/* research styling      */
+/* -------------------- */
+.research {
+  background-color: #eceff1;
+  padding: 60px 45px;
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+.research p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem; /* this is bad, fix this */
+  text-align: justify;
+}
+
+.research-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+}
+
+.researchinner-grid {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.research-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* -------------------- */
+/* experience styling      */
+/* -------------------- */
+
+.experience {
+  background-color: #e0e0e0;
+  padding: 60px 45px;
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+.experience-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+}
+
+.experience-inner-grid {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.experience-item {
+  margin-bottom: 45px;
+}
+.experience h1 {
+}
+
+.experience-item h2 {
+  /*color: #283593;*/
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+  margin: 0;
+}
+
+.experience-item h3 {
+  /*color: #283593;*/
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 0.25rem;
+  margin: 0;
+}
+
+.experience-item h4 {
+  /*color: #283593;*/
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.experience-item p {
+  /*color: #283593;*/
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding-bottom: 0.25rem;
+  margin: 0;
+  text-align: justify;
+}
+
+#attended {
+  padding-top: 1rem;
+}
+
+/* -------------------- */
+/* publication styling  */
+/* -------------------- */
+.publications {
+  background-color: #e0e0e0;
+  padding: 60px 45px;
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+.publications-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.publications-item p {
+  color: gray;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0;
+  /* indents citations */
+  margin-left: 2em;
+  text-indent: -2em;
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+.publications-item ol li {
+  color: gray;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0;
+  /* indents citations */
+  padding-bottom: 1rem;
+  list-style-position: outside;
+}
+.publications-item ol {
+  margin: 1rem;
+  padding: 0;
+}
+/* -------------------- */
+/* other writing        */
+/* -------------------- */
+.other-writing {
+  background-color: #eceff1;
+  padding: 60px 45px;
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+.other-writing-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.other-writing-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* -------------------- */
+/* footer styleing      */
+/* -------------------- */
+.footer {
+  text-align: center;
+  color: #c2c2c2;
+  margin: 0px;
+  padding: 0.01rem;
+  background-color: #424242;
+  font-size: 0.75rem;
+  /* makes footer stay at bottom
+  this is not a perfect solution */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: #e86a6a;
+  text-decoration: none;
+}
+
+/* -------------------- */
+/* features styleing    */
+/* -------------------- */
+.features {
+  background-color: #e8eaf6;
+  padding: 60px 45px;
+}
+
+.features-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.feature-item h3 {
+  color: #283593;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.feature-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* new hamburger */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  /*position: relative;*/
+  position: fixed;
+  top: 80px;
+  width: 100%;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* MEDIA QUERIES*/
+/* if browser window is large (max-width) */
+
+@media only screen and (min-width: 701px) {
+  /* make hero fill screen */
+  .hero {
+    height: 100vh;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
+/* test */

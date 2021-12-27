@@ -1,32 +1,429 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 
-{% include header.html %}
+<head>
+  <title>L. Gloege</title>
 
-<body id="page-top" >
-<div class='site-container'>
+  <!-- META TAGS -->
+  <meta name="description" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{% include navigation.html %}
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
-{% include hero.html %}
+  <!-- Custom Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
-{% include research.html %}
+  <!--
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css.map">
+    -->
+</head>
 
-{% include publications.html %}
+<body>
 
-{% include movies.html %}
 
-{% include footer.html %}
 
-</div> <!-- END SITE CONTAINER-->
+  <!-- header -->
+  <div class='header'>
+    <div class="header-inner">
 
-<!-- Javscripts -->
-<script type="text/javascript" src="{{site.baseurl}}/js/scripts.js"></script>
-<script src="{{site.baseurl}}/js/jquery.easing.1.3.js"></script>
-<script src="{{site.baseurl}}/js/scrolling-nav.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+      <div class="header-item">
+        <h1>Gloege L.</h1>
+      </div>
+
+      <div class="header-item">
+        <!-- hamburger to open links -->
+        <a href="javascript:void(0);" class="icon" onclick="open_links()">
+          <!-- hamburger menu -->
+          <div class="menu-btn hamburger">
+            <div class="menu-btn-hamburger"></div>
+          </div>
+        </a>
+      </div>
+
+      <!-- hamburger menu 
+      <div class="menu-btn">
+        <div class="menu-btn-hamburger"></div>
+      </div>
+      -->
+
+      <!-- main large screen navigation -->
+      <ul class='nav'>
+        <li><a href="#experience">Experience</a> </li>
+        <li><a href="#education">Education</a> </li>
+        <li><a href="#publications">Publications</a> </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- another approach is to make hamburger a checkbox and then use JS js to uncheck when clicked-->
+  <!-- small screen navigation-->
+  <div class="topnav">
+    <div id="myLinks" class="menu">
+      <a id="navlink" href="#experience">Experience</a>
+      <a id="navlink" href="#education">Education</a>
+      <a id="navlink" href="#publications">Publications</a>
+      <!-- 
+      <a id="navlink" href="#research">Research</a>
+      <a id="navlink" href="#other-writing">Other Writing</a>
+      -->
+    </div>
+  </div>
+
+
+
+
+  <!-- hero -->
+  <div class='hero'>
+    <div class="vertical-center">
+      <div class='hero-inner'>
+        <div class='hero-item'>
+          <img class="hero-img" src="/img/luke_mural.jpg" alt="" \>
+        </div>
+
+
+        <div class='hero-item'>
+          <!--
+        <img src="/img/LamontLogo_trans.png" \>
+      -->
+
+          <!-- BRIEF DESCRIPTION-->
+          <h2 class='hero-name'> Luke Gloege </h2>
+          <h4 class='hero-status'>NASA Postdoctoral Fellow</h4>
+
+          <p> I am a climate scientist based at the NASA Goddard Institute for Space Studies in New York City.
+            My reserch focuses on understanding changes in the global carbon cycle using models, direct observations,
+            and satellite retrievals. The Python programming language and its extensive
+            library of open-source projects is my primary analysis tool. Current research is at the nexus of machine
+            learning and Earth science.
+          </p>
+
+          <!-- BUTTONS 
+              <div style='text-align: center;' role="naviation">
+              <button ><a href="#research">Research</a></button>
+              <button ><a href="#publications">Publications</a></button>
+              <button ><a href='#'>CV</a></button>
+        -->
+        </div>
+      </div>
+    </div>
+
+    <div class="under-construction">
+      <p> ** Site under construction **
+
+      </p>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="experience" id="experience">
+    <div class="experience-inner">
+      <h1># Experience</h1>
+      <div class="experience-inner-grid">
+        <div class="experience-item">
+          <h2>NASA Postdoctoral Fellow</h2>
+          <h3>NASA-GISS</h3>
+          <p id='supervisor'><strong>Supervisor:</strong> Anastasia Romanou</p>
+          <p>My research focuses on understanding changes in the ocean carbon cycle and using machine learning to
+            coupled ocean-atmosphere models. </p>
+          <p id='attended'>December 2021 - Present</p>
+        </div>
+
+        <div class="experience-item">
+          <h2>Postdoctoral Research Scholar</h2>
+          <h3>Columbia University, NY</h3>
+          <p id='supervisor'><strong>Supervisor:</strong> Pierre Gentine</p>
+          <p> I focused on the 2020 Siberian heatwave. Positive temperature anomalies over Siberia caused early
+            snowmelt, leading
+            to substantial earlier vegetation greening accompanied by decreased soil moisture and browning in the
+            summer. </p>
+          <p id='attended'>March 2020 - November 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- education -->
+  <div class="education" id="education">
+    <div class="education-inner">
+      <h1># Education</h1>
+      <div class="education-inner-grid">
+        <div class="education-item">
+          <h2>Doctor of Philosophy</h2>
+          <h3>Columbia Univesity / LDEO</h3>
+          <h4>Department of Earth and Environmental Science</h4>
+          <p id='supervisor'><strong>Supervisor:</strong> Galen McKinley</p>
+          <p id='thesis'><strong>Title:</strong>
+            <a href='https://academiccommons.columbia.edu/doi/10.7916/d8-j3p1-tf92'>Global Ocean Carbon Dioxide Flux
+              Mapping Techniques: Evaluation,
+              Development, and Discrepancies
+            </a>
+          </p>
+          <p id='attended'>2017-2020</p>
+        </div>
+
+        <div class="education-item">
+          <h2>Master of Science</h2>
+          <h3>University of Wisconsin - Madison</h3>
+          <h4>Department of Oceanic and Atmospher Sciences</h4>
+          <p id='supervisor'><strong>Supervisor:</strong> Galen McKinley</p>
+          <p id='thesis'><strong>Title:</strong>
+            <a href='https://www.aos.wisc.edu/aosjournal/Volume30/Gloege_MS.pdf'>Global Evaluation of Particulate
+              Organic Carbon Parameterizations and Implications for Atmospheric pCO<sub>2</sub>
+            </a>
+          </p>
+          <p id='attended'>2014-2017</p>
+        </div>
+
+        <div class="education-item">
+          <h2>Master of Science</h2>
+          <h3>University of Minnesota - Duluth</h3>
+          <h4>Water Resources Sciences</h4>
+          <p id='supervisor'><strong>Supervisor:</strong> Jay Austin</p>
+          <p id='thesis'><strong>Title:</strong>
+            <a href='https://conservancy.umn.edu/handle/11299/166770'>Modeling near-inertial waves in Lake
+              Superior
+            </a>
+          </p>
+          <p id='attended'>2012-2014</p>
+        </div>
+
+        <div class="education-item">
+          <h2>Bachelor of Science</h2>
+          <h3>University of Minnesota - Duluth</h3>
+          <h4>Physics / Mathematics</h4>
+          <p id='attended'>2007-2012</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- publications -->
+  <div class="publications" id="publications">
+    <div class="publications-inner">
+      <div class="publications-item">
+        <h1># Publications</h1>
+        <ol reversed>
+          <li>
+            <p>
+              <b>Gloege, Lucas</b>, Kornhuber, K., Skulovich, O., Pal, I., Zhou, S., Ciais, P., and Gentine, P.
+              Land-atmosphere cascade fueled the 2020 siberian heatwave. <i>AGU advances (under review)</i>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <b>Gloege, Lucas</b>, Yan, M., Zheng, T., and McKinley, G. A. Improved quantification of ocean carbon
+              uptake
+              by
+              using machine learning to merge global models and pco2 data. <i>Journal of Advances in Modeling Earth
+                Systems (under review)</i>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <b>Gloege, Lucas</b>, McKinley, G. A., Landschu ̈tzer, P., Lovenduski, N. S., Rodgers, K., Fay, A. R.,
+              Fro
+              ̈licher, T., Fyfe, J., Illyina, T., Jones, S., Ro ̈denbeck, C., Schlunegger, S., and Takano, Y. (2021).
+              Quantifying errors in observationally-based estimates of ocean carbon sink variability <i> Global
+                Biogeochemical Cycles</i>, 35:e2020GB006788
+              <a target="_blank" href="https://doi.org/10.1029/2020GB006788">https://doi.org/10.1029/2020GB006788</a>
+            </p>
+          </li>
+
+
+          <li>
+            <p>
+              Stamell, J., Rustagi, R. R., <b>Gloege, Lucas</b>, and McKinley, G. A. (2020). Strengths and weaknesses
+              of three machine learning methods for pCO<sub>2</sub> interpolation. <i>Geoscientific Model Development
+                Discussions</i>, pages 1–25
+              <a target="_blank" href="https://doi.org/10.1029/2020GB006788">hhttps://doi.org/10.1029/2020GB006788</a>
+
+            </p>
+          </li>
+
+          <li>
+            <p>Abell, J. T., Rahimi, S. R., Pullen, A., Lebo, Z. J., Zhang, D., Kapp, P., <b>Gloege, Lucas</b>, Ridge,
+              S., Nie, J., and Winckler, G. (2020b). Model evidence for the hami basin and possibly other modern stony
+              deserts in
+              asia as dust sources during the plio-pleistocene. <i>Geophysical Research Letters</i>, 47:e2020GL090064
+              <a href="https://doi.org/10.1029/2020GL090064">https://doi.org/10.1029/2020GL090064</a>
+            </p>
+          </li>
+
+          <li>
+            <p>McKinley, G. A., Fay, A. R., <b>Gloege, Lucas</b>, and Lovenduski, N. S. (2020). External forcing
+              explains recent decadal variability of the ocean carbon sink. <i>AGU Advances</i>, 1(2):e2019AV000149
+              <a href="https://doi.org/10.1029/2019AV000149">https://doi.org/10.1029/2019AV000149</a>
+            </p>
+          </li>
+
+
+          <li>
+            <p><b>Gloege, Lucas</b>, McKinley, G. A., Mooney, R., Allan, J., Diebel, M., and McIntyre, P. (2020). Lake
+              hydrodynamics intensify the potential impact of watershed pollutants on coastal ecosystem services.
+              <i>Environmental Research Letters</i>, 15(6):064028
+              <a href="https://doi.org/10.1088/1748-9326/ab7f62">https://doi.org/10.1088/1748-9326/ab7f62</a>
+            </p>
+          </li>
+
+
+          <li>
+            <p>Abell, J. T., Pullen, A., Lebo, Z. J., Kapp, P., <b>Gloege, Lucas</b>, Metcalf, A. R., Nie, J., and
+              Winckler, G. (2020a). A wind-albedo-wind feedback driven by landscape evolution. <i>Nature
+                Communications</i>,
+              11(1):1–9
+              <a href="https://doi.org/10.1038/s41467-019-13661-w">https://doi.org/10.1038/s41467-019-13661-w</a>
+            </p>
+          </li>
+
+          <li>
+            <p><b>Gloege, Lucas</b>, McKinley, G. A., Mouw, C. B., and Ciochetto, A. B. (2017). Global evaluation of
+              particulate organic carbon flux parameterizations and implications for atmospheric pCO<sub>2</sub>.
+              <i>Global Biogeochemical Cycles</i>, 31(7):1192–1215
+              <a href="https://doi.org/10.1002/2016GB005535">https://doi.org/10.1002/2016GB005535</a>
+            </p>
+          </li>
+
+          <li>
+            <p>Mouw, C. B., Barnett, A., McKinley, G. A., <b>Gloege, Lucas</b>, and Pilcher, D. (2016b). Phytoplankton
+              size impact on export flux in the global ocean. <i>Global Biogeochemical Cycles</i>, 30(10):1542–1562
+              <a href="https://doi.org/10.1002/2015GB005355">https://doi.org/10.1002/2015GB005355</a>
+            </p>
+          </li>
+
+
+          <li>
+            <p>Mouw, C. B., Barnett, A., McKinley, G. A., <b>Gloege, Lucas</b>, and Pilcher, D. (2016a). Global ocean
+              particulate organic carbon flux merged with satellite parameters. <i>Earth System Science Data,</i>
+              8(2):531–541
+              <a href="https://doi.org/10.5194/essd-8-531-2016">https://doi.org/10.5194/essd-8-531-2016</a>
+            </p>
+          </li>
+
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Relevant work 
+  <div class="research" id="research">
+
+    <div class="research-inner">
+      <h1># Relevant Work</h1>
+      <p> My research focuses on understanding spatial patterns of nutrients and pCO2
+        in large lakes and oceans. I am interested in how biology and physics mediate
+        these patterns to understand how the climate and ecosystems change over time.
+        This work can lead to efficient managment efforts in large lakes and reduce
+        uncertainty in the global carbon budget.
+        Tools I use to tackle these problems include: computer models,
+        satellite data, and in-situ observations.</p>
+
+      <div class="education-inner-grid">
+        <div class="research-item">
+          <h2> ## LDEO-HPD Ocean pCO<sub>2</sub> Product</h2>
+          <p> The Lamont-Doherty Earth Observatory Hybrid Physics Data (LDEO-HPD) is a pCO<sub>2</sub> product that
+            combines model output and observations. The method is unique in that it directly estimates the model misfit
+            to observations. The product is continuously being developed and improved. The source code is available on
+            GitHub. A Docker image is also available.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+-->
+
+  <!-- other writing
+  <div class="other-writing" id="other-writing">
+    <div class="other-writing-inner">
+      <div class="other-writing-item">
+        <h1># Other Writing</h1>
+        <p> I ocassionaly write on Medium about programming, Python, and climate change. Below are links to
+          recent stories</p>
+      </div>
+    </div>
+  </div>
+  -->
+
+  <!-- features
+  <div class="features">
+    <div class="features-inner">
+      <div class="feature-item">
+        <h3>cool feature 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente voluptatum reprehenderit repellendus
+          iure accusantium laudantium obcaecati quas molestias totam unde, necessitatibus ex commodi quo aliquid
+          voluptates, facilis similique optio?</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>cool feature 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente voluptatum reprehenderit repellendus
+          iure accusantium laudantium obcaecati quas molestias totam unde, necessitatibus ex commodi quo aliquid
+          voluptates, facilis similique optio?</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>cool feature 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente voluptatum reprehenderit repellendus
+          iure accusantium laudantium obcaecati quas molestias totam unde, necessitatibus ex commodi quo aliquid
+          voluptates, facilis similique optio?</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>cool feature 4</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente voluptatum reprehenderit repellendus
+          iure accusantium laudantium obcaecati quas molestias totam unde, necessitatibus ex commodi quo aliquid
+          voluptates, facilis similique optio?</p>
+      </div>
+    </div>
+  </div>
+ -->
+
+  <!-- footer -->
+  <div class="footer">
+    <p>&copy; Copyright 2021 Luke Gloege. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub
+        Pages</a>. Last updated: December 2021.</p>
+  </div>
+
+  <!-- hamburger II
+  This is nice, need to understand what this is doing:
+  https://codepen.io/ngochuynh/pen/yKrvVZ
+  
+  <section class="p-menu1">
+    <nav id="navbarr" class="navigation" role="navigation">
+      <input id="toggle1" type="checkbox" />
+      <label class="hamburger1" for="toggle1">
+        <div class="top"></div>
+        <div class="meat"></div>
+        <div class="bottom"></div>
+      </label>
+
+      <nav class="menu1">
+        <a class="link1" href="">Our Models</a>
+        <a class="link1" href="">Specialties</a>
+        <a class="link1" href="">About</a>
+        <a class="link1" href="">Blog</a>
+        <a class="lin1 kbutton-nav" href="">Contact</a>
+      </nav>
+    </nav>
+  </section>
+  -->
+  <!-- Javscripts -->
+  <script type="text/javascript" src="/javascript/scripts.js"></script>
 
 </body>
+
 </html>
