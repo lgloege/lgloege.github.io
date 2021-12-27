@@ -267,15 +267,14 @@ body {
   auto-fit fit as many a possible
   minmax(smallest, and largest we want them to be)
   */
+  /* if want two columns as large grid media query 
+  the minmax is what is messing up the site  
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    */
   grid-column-gap: 45px;
   grid-row-gap: 45px;
-}
-
-.education-item {
-  margin-bottom: 45px;
-}
-.education h1 {
+  align-items: center;
+  justify-content: center;
 }
 
 .education-item h2 {
@@ -311,6 +310,16 @@ body {
   text-align: justify;
 }
 
+.education-item a {
+  color: black;
+  text-decoration: underline;
+}
+
+.education-item a:hover {
+  color: #e86a6a;
+  text-decoration: none;
+}
+
 #attended {
   padding-top: 1rem;
 }
@@ -344,7 +353,7 @@ body {
   /* vertical horizontal value, auto will horizontally center
   wont cause horizontal scrolling on small devices */
   margin: 0 auto;
-  /* creates a css grid
+  /* creates a css grid3
   https://css-tricks.com/snippets/css/complete-guide-grid/ */
   display: grid;
   /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
@@ -352,9 +361,14 @@ body {
   auto-fit fit as many a possible
   minmax(smallest, and largest we want them to be)
   */
+  /* if want two columns as large grid media query 
+  the minmax is what is messing up the site  
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    */
   grid-column-gap: 45px;
   grid-row-gap: 45px;
+  align-items: center;
+  justify-content: center;
 }
 
 .research-item p {
@@ -394,9 +408,14 @@ body {
   auto-fit fit as many a possible
   minmax(smallest, and largest we want them to be)
   */
+  /* if want two columns as large grid media query 
+  the minmax is what is messing up the site  
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    */
   grid-column-gap: 45px;
   grid-row-gap: 45px;
+  align-items: center;
+  justify-content: center;
 }
 
 .experience-item {
@@ -494,6 +513,16 @@ body {
 .publications-item ol {
   margin: 1rem;
   padding: 0;
+}
+
+.publications-item ol li p a {
+  color: gray;
+  text-decoration: underline;
+}
+
+.publications-item a:hover {
+  color: #e86a6a;
+  text-decoration: none;
 }
 /* -------------------- */
 /* other writing        */
@@ -646,6 +675,13 @@ body {
 
   .menu-btn {
     display: none;
+  }
+  .education-inner-grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  .experience-inner-grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
 /* test */
