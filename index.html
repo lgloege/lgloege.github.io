@@ -58,7 +58,7 @@
 
       <!-- main large screen navigation -->
       <ul class='nav'>
-        <li><a href="#experience">Experience</a> </li>
+        <li><a id="to_experience" href="#experience">Experience</a></li>
         <li><a href="#education">Education</a> </li>
         <li><a href="#publications">Publications</a> </li>
       </ul>
@@ -69,9 +69,9 @@
   <!-- small screen navigation-->
   <div class="topnav">
     <div id="myLinks" class="menu">
-      <a id="navlink" href="#experience">Experience</a>
-      <a id="navlink" href="#education">Education</a>
-      <a id="navlink" href="#publications">Publications</a>
+      <a id="navlink" href="#experience" onclick="close_links()">Experience</a>
+      <a id="navlink" href="#education" onclick="close_links()">Education</a>
+      <a id="navlink" href="#publications" onclick="close_links()">Publications</a>
       <!-- 
       <a id="navlink" href="#research">Research</a>
       <a id="navlink" href="#other-writing">Other Writing</a>
@@ -107,12 +107,6 @@
             learning and Earth science.
           </p>
 
-          <!-- BUTTONS 
-              <div style='text-align: center;' role="naviation">
-              <button ><a href="#research">Research</a></button>
-              <button ><a href="#publications">Publications</a></button>
-              <button ><a href='#'>CV</a></button>
-        -->
         </div>
       </div>
     </div>
@@ -423,6 +417,7 @@
   -->
   <!-- Javscripts -->
   <script type="text/javascript" src="/javascript/scripts.js"></script>
+
 
 </body>
 

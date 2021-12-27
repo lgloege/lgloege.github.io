@@ -16,6 +16,7 @@ menuBtn.addEventListener('click', () => {
 });
 
 
+
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function open_links() {
     var x = document.getElementById("myLinks");
@@ -26,12 +27,16 @@ function open_links() {
     }
   }
 
-  $('.hamburger').on('click', function () {
-    $('.menu').addClass('open');
-  });
-  
-  $( '.menu a' ).on("click", function(){
-    $('.topnav #myLinks').style.display("none");
-  });
 
-  
+function close_links() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    /* closes the link box */
+    x.style.display = "none";
+
+    /* convert back to hamburger */
+    menuBtn.classList.remove('open');
+  } else {
+    x.style.display = "block";
+  }
+}

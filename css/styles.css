@@ -1,8 +1,18 @@
 body {
-  margin: 0; /* makes content flushagain edge*/
-  font-family: "source sans pro", sans-serif; /* find fonts here https://fonts.google.com/ */
+  /* makes content flushagain edge*/
+  margin: 0;
+  /* find fonts here https://fonts.google.com/ */
+  font-family: "source sans pro", sans-serif;
   height: 100%;
   width: 100%;
+}
+
+html {
+  /* 
+  enables smooth scrolling with links
+  not supported by Safari yet 
+  */
+  scroll-behavior: smooth;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -76,7 +86,8 @@ body {
 /* header and nav styleing */
 /* ----------------------- */
 .header {
-  padding: 0px 45px 0px 45px; /* padding on top, right, bottom, left*/
+  /* padd: top, right, bottom, left*/
+  padding: 0px 45px 0px 45px;
   /*background-color: #9e9e9e;*/
   background-color: #424242;
   color: #ffffff;
@@ -86,7 +97,8 @@ body {
   /* flexbox: look at links in here 
   https://www.youtube.com/watch?v=DJq6R2b0FoE&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&index=3 
   */
-  display: grid; /* flex aligns direct children on single line*/
+  /* flex aligns direct children on single line*/
+  display: grid;
   grid-template-columns: repeat(1fr, minmax(300px, 1fr));
   grid-column-gap: 45px;
   grid-row-gap: 45px;
@@ -106,8 +118,10 @@ body {
   /* creates a css grid
   https://css-tricks.com/snippets/css/complete-guide-grid/ */
   display: flex;
-  justify-content: space-between; /* controls horizontal alignment */
-  align-items: center; /* controls vertical alignment */
+  /* controls horizontal alignment */
+  justify-content: space-between;
+  /* controls vertical alignment */
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -119,23 +133,28 @@ body {
 }
 
 .nav li {
-  margin-left: 20px; /* puts some space bewteen list items*/
+  /* puts some space bewteen list items */
+  margin-left: 20px;
   font-size: 1.25rem;
 }
 
 .nav a {
   color: #ffffff;
   text-decoration: none;
-  display: block; /* display block necessary for transofrm https://www.w3schools.com/cssref/pr_class_display.asp */
-  transition: all 0.3s ease-out; /* transition properies https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
+  /* display block necessary for transofrm https://www.w3schools.com/cssref/pr_class_display.asp */
+  display: block;
+  /* 
+  transition properies 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions 
+  */
+  transition: all 0.3s ease-out;
 }
 
 /* styles when element is hovered */
 .nav a:hover {
   color: #c5cae9;
-  transform: rotate(
-    6deg
-  ); /* rotate/scale/skew items https://developer.mozilla.org/en-US/docs/Web/CSS/transform*/
+  /* rotate/scale/skew items https://developer.mozilla.org/en-US/docs/Web/CSS/transform*/
+  transform: rotate(6deg);
 }
 
 /* ----------------------- */
@@ -148,7 +167,8 @@ body {
   padding: 12px 20px;
   border-radius: 8px;
   font-size: 1.18rem;
-  display: inline-block; /* respond to vertical element on neightbor, but not take full width*/
+  /* respond to vertical element on neightbor, but not take full width*/
+  display: inline-block;
 }
 
 /* -------------------- */
@@ -684,4 +704,3 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
-/* test */
