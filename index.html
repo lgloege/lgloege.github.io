@@ -35,38 +35,36 @@
   <div class='header'>
     <div class="header-inner">
 
-
+      <!-- header logo -->
       <div class="header-item">
-        <h1>Gloege L.</h1>
+        <a href="#">
+          <h1>Gloege L.</h1>
+        </a>
       </div>
 
+      <!-- hamburger icon ** only for SMALL screen ** -->
       <div class="header-item">
-        <!-- hamburger to open links -->
+        <!-- javascript is used to open the hamburger menu -->
         <a href="javascript:void(0);" class="icon" onclick="open_links()">
-          <!-- hamburger menu -->
+          <!-- hamburger icon -->
           <div class="menu-btn hamburger">
             <div class="menu-btn-hamburger"></div>
           </div>
         </a>
       </div>
 
-      <!-- hamburger menu 
-      <div class="menu-btn">
-        <div class="menu-btn-hamburger"></div>
-      </div>
-      -->
-
-      <!-- main large screen navigation -->
+      <!-- main navigation ** for LARGE screens ** -->
       <ul class='nav'>
-        <li><a id="to_experience" href="#experience">Experience</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a> </li>
         <li><a href="#publications">Publications</a> </li>
       </ul>
-    </div>
-  </div>
+    </div> <!-- header-inner close -->
+  </div> <!-- header close -->
 
-  <!-- another approach is to make hamburger a checkbox and then use JS js to uncheck when clicked-->
-  <!-- small screen navigation-->
+  <!-- 
+    hamburger menu open_links() is used to display links when hamburger pressed 
+  -->
   <div class="topnav">
     <div id="myLinks" class="menu">
       <a id="navlink" href="#experience" onclick="close_links()">Experience</a>
@@ -80,61 +78,60 @@
   </div>
 
 
-
-
   <!-- hero -->
   <div class='hero'>
-    <div class="vertical-center">
-      <div class='hero-inner'>
-        <div class='hero-item'>
-          <img class="hero-img" src="/img/luke_mural.jpg" alt="" \>
-        </div>
+    <div class='hero-inner'>
 
-
-        <div class='hero-item'>
-          <!--
-        <img src="/img/LamontLogo_trans.png" \>
-      -->
-
-          <!-- BRIEF DESCRIPTION-->
-          <h2 class='hero-name'> Luke Gloege </h2>
-          <h4 class='hero-status'>NASA Postdoctoral Fellow</h4>
-
-          <p> I am a climate scientist based at the NASA Goddard Institute for Space Studies in New York City.
-            My reserch focuses on understanding changes in the global carbon cycle using models, direct observations,
-            and satellite retrievals. The Python programming language and its extensive
-            library of open-source projects is my primary analysis tool. Current research is at the nexus of machine
-            learning and Earth science.
-          </p>
-
-        </div>
+      <!-- hero image (left) -->
+      <div class='hero-item'>
+        <img class="hero-img" src="/img/luke_mural.jpg" alt="" \>
       </div>
-    </div>
 
-    <div class="under-construction">
-      <p> ** Site under construction **
 
-      </p>
-    </div>
-  </div>
+      <!-- hero description (right)-->
+      <div class='hero-item'>
+        <!-- <img src="/img/LamontLogo_trans.png" \> -->
+        <h2 class='hero-name'> Luke Gloege </h2>
+        <h4 class='hero-status'>NASA Postdoctoral Fellow</h4>
+
+        <p> I am a climate scientist based at the NASA Goddard Institute for Space Studies in New York City.
+          My reserch focuses on understanding changes in the global carbon cycle using models, direct observations,
+          and satellite retrievals. Current research is at the nexus of machine learning and Earth science.
+
+          I am particularly interested in how biology and physics mediate the spatial patterns of nutrients and
+          pCO<sub>2</sub> to understand how the climate and ecosystems change over time.
+          This work can lead to efficient managment efforts in large lakes/oceans and reduce
+          uncertainty in the global carbon budget.
+          <!--  
+            Tools I use to tackle these problems include: computer models,
+            satellite data, and in-situ observations.
+            My research focuses on understanding spatial patterns of nutrients and pCO2
+            in large lakes and oceans. 
+          -->
+        </p>
+      </div>
+    </div> <!-- hero-inner close -->
+  </div> <!-- hero close -->
+
 
   <!-- Experience -->
   <div class="experience" id="experience">
+
     <div class="experience-inner">
-      <h1># Experience</h1>
+      <h1> <span class="gray-hash">#</span> Experience</h1>
       <div class="experience-inner-grid">
         <div class="experience-item">
           <h2>NASA Postdoctoral Fellow</h2>
-          <h3>NASA-GISS</h3>
+          <h3>NASA Goddard Institute for Space Studies</h3>
           <p id='supervisor'><strong>Supervisor:</strong> Anastasia Romanou</p>
-          <p>My research focuses on understanding changes in the ocean carbon cycle and using machine learning to
-            coupled ocean-atmosphere models. </p>
+          <p>My research focuses on understanding changes in the ocean carbon cycle using coupled ocean-atmosphere
+            models and machine learning. </p>
           <p id='attended'>December 2021 - Present</p>
         </div>
 
         <div class="experience-item">
           <h2>Postdoctoral Research Scholar</h2>
-          <h3>Columbia University, NY</h3>
+          <h3>Columbia University in the City of New York</h3>
           <p id='supervisor'><strong>Supervisor:</strong> Pierre Gentine</p>
           <p> I focused on the 2020 Siberian heatwave. Positive temperature anomalies over Siberia caused early
             snowmelt, leading
@@ -142,19 +139,20 @@
             summer. </p>
           <p id='attended'>March 2020 - November 2021</p>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> <!-- experience-inner-grid close -->
+    </div> <!-- experience-inner close -->
+  </div> <!-- experience close -->
+
 
   <!-- education -->
   <div class="education" id="education">
     <div class="education-inner">
-      <h1># Education</h1>
+      <h1><span class="gray-hash">#</span> Education</h1>
       <div class="education-inner-grid">
 
         <div class="education-item">
           <h2>Doctor of Philosophy</h2>
-          <h3>Columbia Univesity / LDEO</h3>
+          <h3>Columbia Univesity / Lamont-Doherty Earth Observatory</h3>
           <h4>Department of Earth and Environmental Science</h4>
           <p id='supervisor'><strong>Supervisor:</strong> Galen McKinley</p>
           <p id='thesis'><strong>Title:</strong>
@@ -172,8 +170,10 @@
           <h4>Department of Oceanic and Atmospher Sciences</h4>
           <p id='supervisor'><strong>Supervisor:</strong> Galen McKinley</p>
           <p id='thesis'><strong>Title:</strong>
-            <a href='https://www.aos.wisc.edu/aosjournal/Volume30/Gloege_MS.pdf'>Global Evaluation of Particulate
-              Organic Carbon Parameterizations and Implications for Atmospheric pCO<sub>2</sub>
+            <a href='https://www.aos.wisc.edu/aosjournal/Volume30/Gloege_MS.pdf'>
+              <p> Global Evaluation of Particulate
+                Organic Carbon Parameterizations and Implications for Atmospheric pCO<sub>2</sub>
+              </p>
             </a>
           </p>
           <p id='attended'>2014-2017</p>
@@ -198,15 +198,18 @@
           <h4>Physics / Mathematics</h4>
           <p id='attended'>2007-2012</p>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> <!-- education-inner-grid close -->
+    </div> <!-- education-inner close -->
+  </div> <!-- education close -->
+
 
   <!-- publications -->
   <div class="publications" id="publications">
     <div class="publications-inner">
+
       <div class="publications-item">
-        <h1># Publications</h1>
+        <h1><span class="gray-hash">#</span> Publications</h1>
+
         <ol reversed>
           <li>
             <p>
@@ -305,28 +308,36 @@
               <a href="https://doi.org/10.5194/essd-8-531-2016">https://doi.org/10.5194/essd-8-531-2016</a>
             </p>
           </li>
-
         </ol>
       </div>
-    </div>
-  </div>
+
+    </div> <!-- publication-inner close -->
+  </div> <!-- publication close -->
+
 
   <!-- Relevant work 
   <div class="research" id="research">
 
     <div class="research-inner">
-      <h1># Relevant Work</h1>
-      <p> My research focuses on understanding spatial patterns of nutrients and pCO2
-        in large lakes and oceans. I am interested in how biology and physics mediate
-        these patterns to understand how the climate and ecosystems change over time.
-        This work can lead to efficient managment efforts in large lakes and reduce
-        uncertainty in the global carbon budget.
-        Tools I use to tackle these problems include: computer models,
-        satellite data, and in-situ observations.</p>
+      <h1><span class="gray-hash">#</span> LDEO-HPD</h1>
+      <p>
+        An ongoing project includes maintaining and developing the Lamont-Doherty Earth Observatory Hybrid Physics
+        Data (LDEO-HPD) pCO<sub>2</sub> product. This product creates a continous product that is nearly gap-free.
+        The method is described in detail in Gloege et al. (2021). Code is available on GitHub and the model is
+        available as a Docker Image
+      </p>
+
+      <div class="button-container">
+        <button> Manuscript </button>
+
+        <button> Github </button>
+
+        <button> Docker </button>
+      </div>
 
       <div class="education-inner-grid">
         <div class="research-item">
-          <h2> ## LDEO-HPD Ocean pCO<sub>2</sub> Product</h2>
+          <h2> LDEO-HPD Ocean pCO<sub>2</sub> Product</h2>
           <p> The Lamont-Doherty Earth Observatory Hybrid Physics Data (LDEO-HPD) is a pCO<sub>2</sub> product that
             combines model output and observations. The method is unique in that it directly estimates the model misfit
             to observations. The product is continuously being developed and improved. The source code is available on
@@ -338,13 +349,13 @@
   </div>
   </div>
   </div>
--->
+  -->
 
   <!-- other writing
   <div class="other-writing" id="other-writing">
     <div class="other-writing-inner">
       <div class="other-writing-item">
-        <h1># Other Writing</h1>
+        <h1><span class="gray-hash">#</span> Other Writing</h1>
         <p> I ocassionaly write on Medium about programming, Python, and climate change. Below are links to
           recent stories</p>
       </div>
@@ -388,36 +399,12 @@
 
   <!-- footer -->
   <div class="footer">
-    <p>&copy; Copyright 2021 Luke Gloege. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub
-        Pages</a>. Last updated: December 2021.</p>
+    <p>&copy; Copyright 2021. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub
+        Pages</a>. updated: December 2021. Designed by Luke Gloege</p>
   </div>
 
-  <!-- hamburger II
-  This is nice, need to understand what this is doing:
-  https://codepen.io/ngochuynh/pen/yKrvVZ
-  
-  <section class="p-menu1">
-    <nav id="navbarr" class="navigation" role="navigation">
-      <input id="toggle1" type="checkbox" />
-      <label class="hamburger1" for="toggle1">
-        <div class="top"></div>
-        <div class="meat"></div>
-        <div class="bottom"></div>
-      </label>
-
-      <nav class="menu1">
-        <a class="link1" href="">Our Models</a>
-        <a class="link1" href="">Specialties</a>
-        <a class="link1" href="">About</a>
-        <a class="link1" href="">Blog</a>
-        <a class="lin1 kbutton-nav" href="">Contact</a>
-      </nav>
-    </nav>
-  </section>
-  -->
   <!-- Javscripts -->
   <script type="text/javascript" src="/javascript/scripts.js"></script>
-
 
 </body>
 

@@ -1,5 +1,5 @@
 /* 
-this was used for original hamburger menu 
+toggle hamburger icon by adding/removing an "open" class
 https://www.youtube.com/watch?v=dIyVTjJAkLw 
 */
 const menuBtn = document.querySelector('.menu-btn');
@@ -17,7 +17,9 @@ menuBtn.addEventListener('click', () => {
 
 
 
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+/* 
+Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon 
+*/
 function open_links() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
@@ -28,6 +30,9 @@ function open_links() {
   }
 
 
+/* 
+closes hamburger menu and changes icon when link is clicked 
+*/
 function close_links() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {

@@ -1,3 +1,15 @@
+/* 
+I am not using css variables for cross-browser compatability 
+but like to keep them here for reference 
+
+:root {
+  --background-extra-dark: #424242;
+  --background-dark: #e0e0e0;
+  --background-light: #eceff1;
+  --hover-color: #e86a6a;
+}
+*/
+
 body {
   /* makes content flushagain edge*/
   margin: 0;
@@ -20,6 +32,10 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.gray-hash {
+  color: gray;
 }
 
 /* ---------------------------------------------- */
@@ -109,6 +125,20 @@ html {
   font-weight: normal;
 }
 
+.header-item a {
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Source Code Pro", sans-serif;
+  color: white;
+}
+
+.header-item a:hover {
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Source Code Pro", sans-serif;
+  color: #e86a6a;
+}
+
 .header-inner {
   max-width: 1100px;
   /*border-bottom: 5px solid #f88c00;*/
@@ -152,9 +182,12 @@ html {
 
 /* styles when element is hovered */
 .nav a:hover {
-  color: #c5cae9;
-  /* rotate/scale/skew items https://developer.mozilla.org/en-US/docs/Web/CSS/transform*/
-  transform: rotate(6deg);
+  color: #e86a6a;
+  /* 
+  This rotates the icon slighly. You could also ..
+  rotate/scale/skew items https://developer.mozilla.org/en-US/docs/Web/CSS/transform 
+  */
+  /* transform: rotate(6deg); */
 }
 
 /* ----------------------- */
@@ -258,146 +291,6 @@ html {
 }
 
 /* -------------------- */
-/* education styling    */
-/* -------------------- */
-.education {
-  background-color: #eceff1;
-  padding: 60px 45px;
-  /* this fills div, but breaks on small screens */
-  /* height: 100vh; */
-}
-
-.education-inner {
-  max-width: 1100px;
-  /* vertical horizontal value, auto will horizontally center
-  wont cause horizontal scrolling on small devices */
-  margin: 0 auto;
-}
-
-.education-inner-grid {
-  max-width: 1100px;
-  /* vertical horizontal value, auto will horizontally center
-  wont cause horizontal scrolling on small devices */
-  margin: 0 auto;
-  /* creates a css grid
-  https://css-tricks.com/snippets/css/complete-guide-grid/ */
-  display: grid;
-  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
-  repeat(4, 25$)
-  auto-fit fit as many a possible
-  minmax(smallest, and largest we want them to be)
-  */
-  /* if want two columns as large grid media query 
-  the minmax is what is messing up the site  
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    */
-  grid-column-gap: 45px;
-  grid-row-gap: 45px;
-  align-items: center;
-  justify-content: center;
-}
-
-.education-item h2 {
-  /*color: #283593;*/
-  font-size: 1.75rem;
-  font-weight: bold;
-  padding-bottom: 0.25rem;
-  margin: 0;
-}
-
-.education-item h3 {
-  /*color: #283593;*/
-  font-size: 1.5rem;
-  font-weight: normal;
-  padding-bottom: 0.25rem;
-  margin: 0;
-}
-
-.education-item h4 {
-  /*color: #283593;*/
-  font-size: 1.25rem;
-  font-weight: normal;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-
-.education-item p {
-  /*color: #283593;*/
-  font-size: 1.25rem;
-  font-weight: normal;
-  padding-bottom: 0.25rem;
-  margin: 0;
-  text-align: justify;
-}
-
-.education-item a {
-  color: black;
-  text-decoration: underline;
-}
-
-.education-item a:hover {
-  color: #e86a6a;
-  text-decoration: none;
-}
-
-#attended {
-  padding-top: 1rem;
-}
-/* -------------------- */
-/* research styling      */
-/* -------------------- */
-.research {
-  background-color: #eceff1;
-  padding: 60px 45px;
-  /* this fills div, but breaks on small screens */
-  /* height: 100vh; */
-}
-
-.research p {
-  margin: 0;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 1rem; /* this is bad, fix this */
-  text-align: justify;
-}
-
-.research-inner {
-  max-width: 1100px;
-  /* vertical horizontal value, auto will horizontally center
-  wont cause horizontal scrolling on small devices */
-  margin: 0 auto;
-}
-
-.researchinner-grid {
-  max-width: 1100px;
-  /* vertical horizontal value, auto will horizontally center
-  wont cause horizontal scrolling on small devices */
-  margin: 0 auto;
-  /* creates a css grid3
-  https://css-tricks.com/snippets/css/complete-guide-grid/ */
-  display: grid;
-  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
-  repeat(4, 25$)
-  auto-fit fit as many a possible
-  minmax(smallest, and largest we want them to be)
-  */
-  /* if want two columns as large grid media query 
-  the minmax is what is messing up the site  
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    */
-  grid-column-gap: 45px;
-  grid-row-gap: 45px;
-  align-items: center;
-  justify-content: center;
-}
-
-.research-item p {
-  margin: 0;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* -------------------- */
 /* experience styling      */
 /* -------------------- */
 
@@ -475,10 +368,183 @@ html {
   padding-bottom: 0.25rem;
   margin: 0;
   text-align: justify;
+  hyphens: auto;
 }
 
 #attended {
   padding-top: 1rem;
+}
+
+/* -------------------- */
+/* education styling    */
+/* -------------------- */
+.education {
+  background-color: #eceff1;
+  padding: 60px 45px;
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+.education-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+}
+
+.education-inner-grid {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  /* if want two columns as large grid media query 
+  the minmax is what is messing up the site  
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    */
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-item h2 {
+  /*color: #283593;*/
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+  margin: 0;
+}
+
+.education-item h3 {
+  /*color: #283593;*/
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 0.25rem;
+  margin: 0;
+}
+
+.education-item h4 {
+  /*color: #283593;*/
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.education-item p {
+  /*color: #283593;*/
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding-bottom: 0.25rem;
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.education-item a {
+  color: black;
+  text-decoration: underline;
+}
+
+.education-item a p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.education-item a:hover {
+  color: #e86a6a;
+  text-decoration: none;
+}
+
+#attended {
+  padding-top: 1rem;
+}
+/* -------------------- */
+/* research styling      */
+/* -------------------- */
+.research {
+  background-color: #eceff1;
+  padding: 60px 45px;
+  /* this fills div, but breaks on small screens */
+  /* height: 100vh; */
+}
+
+.research p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem; /* this is bad, fix this */
+  text-align: justify;
+}
+
+.research-inner {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.button-container button {
+  background-color: #424242;
+  font-size: 1.25em;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.button-container button:hover {
+  background-color: #e86a6a;
+  font-size: 1.25em;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.researchinner-grid {
+  max-width: 1100px;
+  /* vertical horizontal value, auto will horizontally center
+  wont cause horizontal scrolling on small devices */
+  margin: 0 auto;
+  /* creates a css grid3
+  https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  /* two grid ex: 300px 200px  or 50% 50%  or 1fr 1fr (fraction unit, equal width)
+  repeat(4, 25$)
+  auto-fit fit as many a possible
+  minmax(smallest, and largest we want them to be)
+  */
+  /* if want two columns as large grid media query 
+  the minmax is what is messing up the site  
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    */
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+.research-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* -------------------- */
@@ -515,10 +581,15 @@ html {
   font-weight: normal;
   margin: 0;
   /* indents citations */
-  margin-left: 2em;
-  text-indent: -2em;
+  margin-left: 1em;
+  text-indent: -1em;
   padding-bottom: 1rem;
   text-align: justify;
+}
+
+.publications-item ol {
+  margin: 1rem;
+  padding: 0;
 }
 
 .publications-item ol li {
@@ -530,9 +601,17 @@ html {
   padding-bottom: 1rem;
   list-style-position: outside;
 }
-.publications-item ol {
-  margin: 1rem;
-  padding: 0;
+
+.publications-item ol li p {
+  color: #424242;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.publications-item ol li p i {
+  color: #424242;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .publications-item ol li p a {
@@ -686,7 +765,8 @@ html {
 @media only screen and (min-width: 701px) {
   /* make hero fill screen */
   .hero {
-    height: 100vh;
+    /* min-height avoids text overflow */
+    min-height: 100vh;
   }
 
   .nav {
