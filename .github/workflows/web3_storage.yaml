@@ -15,5 +15,5 @@ jobs:
         with:
           web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
           path_to_add: "/"
-      - run: echo ${{ steps.web3.outputs.cid }}
-      - run: echo ${{ steps.web3.outputs.url }}
+        - run: echo ${{ steps.web3.outputs.cid }}
+        - run: echo ${{ steps.web3.outputs.url }}
