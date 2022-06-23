@@ -1,4 +1,4 @@
-name: Example push to ipfs
+name: push to ipfs
 on: [push]
 jobs:
   run:
@@ -11,6 +11,6 @@ jobs:
         id: web3
         with:
           web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
-          path_to_add: "."
+          path_to_add: ""
       - run: echo ${{ steps.web3.outputs.cid }}
       - run: echo ${{ steps.web3.outputs.url }}
