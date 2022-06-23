@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: web3-storage/add-to-web3@v2
       - uses: ./
+        id: web3
         with:
           web3_api: "https://api-staging.web3.storage"
           web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
