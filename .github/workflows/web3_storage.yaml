@@ -4,7 +4,8 @@ on:
   - pull_request
 
 jobs:
-  web3:
+  run-action:
+    runs-on: ubuntu-latest
     uses: web3-storage/add-to-web3@v2
     id: web3
     with:
