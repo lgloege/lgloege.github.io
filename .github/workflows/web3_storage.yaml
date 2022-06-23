@@ -1,23 +1,19 @@
-name: Test
+name: web3
 on:
-  pull_request:
-  push:
-    branches:
-      - main
-      - 'releases/*'
+  - push
+  - pull_request
 
 jobs:
-  test:
+  run-action:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: ./
-      with:
-        web3_api: 'https://api-staging.web3.storage'
-        web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
-        path_to_add: 'test/fixtures'
-        # test non default option
-        include_hidden: true
-
-  - run: echo ${{ steps.web3.outputs.cid }}
-  - run: echo ${{ steps.web3.outputs.url }}
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          web3_api: "https://api-staging.web3.storage"
+          web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
+          path_to_add: "./"
+          # test non default option
+          include_hidden: true
+      - run: echo ${{ steps.web3.outputs.cid }}
+      - run: echo ${{ steps.web3.outputs.url }}
