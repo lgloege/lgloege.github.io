@@ -10,10 +10,12 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+
         uses: web3-storage/add-to-web3@v2
         id: web3
         with:
           web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
           path_to_add: "/"
-        - run: echo ${{ steps.web3.outputs.cid }}
-        - run: echo ${{ steps.web3.outputs.url }}
+
+      - run: echo ${{ steps.web3.outputs.cid }}
+      - run: echo ${{ steps.web3.outputs.url }}
