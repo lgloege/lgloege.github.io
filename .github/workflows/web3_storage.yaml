@@ -8,3 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: echo "this worked"
+      - uses: web3-storage/add-to-web3@v2
+        id: web3
+        with:
+          web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
+          path_to_add: "/"
+      - run: echo ${{ steps.web3.outputs.cid }}
+      - run: echo ${{ steps.web3.outputs.url }}
