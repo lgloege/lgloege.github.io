@@ -4,6 +4,13 @@ on:
   - pull_request
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        env:
+          INPUT_WEB3_TOKEN: ${{ secrets.WEB3_STORAGE_TOKEN }}
+
   run-action:
     runs-on: ubuntu-latest
     steps:
