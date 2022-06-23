@@ -6,9 +6,6 @@ jobs:
   copy-file:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
       - name: Push to IPFS
         uses: web3-storage/add-to-web3@v2
         id: web3
