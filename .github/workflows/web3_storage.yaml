@@ -2,6 +2,7 @@ name: web3
 on:
   - push
   - pull_request
+
 jobs:
   web3:
     uses: web3-storage/add-to-web3@v2
@@ -9,5 +10,6 @@ jobs:
     with:
       web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
       path_to_add: '/'
+
     - run: echo ${{ steps.web3.outputs.cid }}
     - run: echo ${{ steps.web3.outputs.url }}
