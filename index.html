@@ -1,356 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>L. Gloege</title>
 
-<head>
-  <title>L. Gloege</title>
+    <!-- META TAGS -->
+    <meta name="description" content="" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-  <!-- META TAGS -->
-  <meta name="description" content="">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
 
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Custom Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-
-  <!--
+    <!--
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css.map">
     -->
+  </head>
 
-</head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="header-inner">
+        <!-- header logo -->
+        <div class="header-item">
+          <a href="#">
+            <h1>Gloege L.</h1>
+          </a>
+        </div>
 
-<body>
+        <!-- hamburger icon ** only for SMALL screen ** -->
+        <div class="header-item">
+          <!-- javascript is used to open the hamburger menu -->
+          <a href="javascript:void(0);" class="icon" onclick="open_links()">
+            <!-- hamburger icon -->
+            <div class="menu-btn hamburger">
+              <div class="menu-btn-hamburger"></div>
+            </div>
+          </a>
+        </div>
 
-  <!-- header -->
-  <div class='header'>
-    <div class="header-inner">
-
-      <!-- header logo -->
-      <div class="header-item">
-        <a href="#">
-          <h1>Gloege L.</h1>
-        </a>
+        <!-- main navigation ** for LARGE screens ** -->
+        <ul class="nav">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#publications">Publications</a></li>
+        </ul>
       </div>
+      <!-- header-inner close -->
+    </div>
+    <!-- header close -->
 
-      <!-- hamburger icon ** only for SMALL screen ** -->
-      <div class="header-item">
-        <!-- javascript is used to open the hamburger menu -->
-        <a href="javascript:void(0);" class="icon" onclick="open_links()">
-          <!-- hamburger icon -->
-          <div class="menu-btn hamburger">
-            <div class="menu-btn-hamburger"></div>
-          </div>
-        </a>
-      </div>
-
-      <!-- main navigation ** for LARGE screens ** -->
-      <ul class='nav'>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a> </li>
-        <li><a href="#publications">Publications</a> </li>
-      </ul>
-    </div> <!-- header-inner close -->
-  </div> <!-- header close -->
-
-  <!--
+    <!--
     hamburger menu open_links() is used to display links when hamburger pressed
   -->
-  <div class="topnav">
-    <div id="myLinks" class="menu">
-      <a id="navlink" href="#experience" onclick="close_links()">Experience</a>
-      <a id="navlink" href="#education" onclick="close_links()">Education</a>
-      <a id="navlink" href="#publications" onclick="close_links()">Publications</a>
-      <!--
+    <div class="topnav">
+      <div id="myLinks" class="menu">
+        <a id="navlink" href="#experience" onclick="close_links()"
+          >Experience</a
+        >
+        <a id="navlink" href="#education" onclick="close_links()">Education</a>
+        <a id="navlink" href="#publications" onclick="close_links()"
+          >Publications</a
+        >
+        <!--
       <a id="navlink" href="#research">Research</a>
       <a id="navlink" href="#other-writing">Other Writing</a>
-      -->
+      --></div>
     </div>
-  </div>
 
-
-  <!-- hero -->
-  <div class='hero'>
-    <div class='hero-inner'>
-
-      <!-- hero image (left) -->
-      <div class='hero-item'>
-        <img class="hero-img" src="/img/luke_mural_500px.jpg" alt="" \>
-      </div>
-
-
-      <!-- hero description (right)-->
-      <div class='hero-item'>
-        <!-- <img src="/img/LamontLogo_trans.png" \> -->
-        <h2 class='hero-name'> Luke Gloege </h2>
-        <h4 class='hero-status'>Postdoctoral Research Associate</h4>
-
-        <p> I am a Postdoctoral Research Associate based at Yale University.
-          My research focuses on understanding changes in the global carbon cycle using models, machine learning, and observations.
-          Current research uses machine learning to emulate ocean alkainty enhancement (OAE) intervention simulations.
-
-          I am particularly interested in how biology and physics mediate the spatial patterns of nutrients and
-          pCO<sub>2</sub> to understand how the climate and ecosystems change over time.
-          This work can lead to efficient managment efforts in large lakes/oceans and reduce
-          uncertainty in the global carbon budget.
-          <!--
-            Tools I use to tackle these problems include: computer models,
-            satellite data, and in-situ observations.
-            My research focuses on understanding spatial patterns of nutrients and pCO2
-            in large lakes and oceans.
-          -->
-        </p>
-      </div>
-    </div> <!-- hero-inner close -->
-  </div> <!-- hero close -->
-
-
-  <!-- Experience -->
-  <div class="experience" id="experience">
-
-    <div class="experience-inner">
-      <h1> <span class="gray-hash">#</span> Experience</h1>
-      <div class="experience-inner-grid">
-
-        <div class="experience-item">
-          <h2>Postdoctoral Research Associate</h2>
-          <h3>Yale University</h3>
-          <p id='supervisor'><strong>Supervisor:</strong> Matthew Eisaman</p>
-          <p>My research focuses on emulating ocean alkalinity enhancement (OAE)
-            interventions simulations using machine learning.</p>
-          <p id='attended'>January 2024 - Present</p>
+    <!-- hero -->
+    <div class="hero">
+      <div class="hero-inner">
+        <!-- hero image (left) -->
+        <div class="hero-item">
+          <img class="hero-img" src="/img/luke_mural_500px.jpg" alt="" \ />
         </div>
 
-        <div class="experience-item">
-          <h2>Climate Data Engineer</h2>
-          <h3>Open Earth Foundation</h3>
-          <p id='supervisor'><strong>Supervisor:</strong> Evan Prodromou</p>
-          <p>I collaborated on open source projects including a climate accounting system
-            and an app to help cities track their emissions.</p>
-          <p id='attended'>November 2022 - December 2023</p>
-        </div>
+        <!-- hero description (right)-->
+        <div class="hero-item">
+          <!-- <img src="/img/LamontLogo_trans.png" \> -->
+          <h2 class="hero-name">Luke Gloege</h2>
+          <h4 class="hero-status">Associate Research Scientist</h4>
 
-        <div class="experience-item">
-          <h2>NASA Postdoctoral Fellow</h2>
-          <h3>NASA Goddard Institute for Space Studies</h3>
-          <p id='supervisor'><strong>Supervisor:</strong> Anastasia Romanou</p>
-          <p>My research focuses on understanding changes in the ocean carbon cycle using coupled ocean-atmosphere
-            models and machine learning. </p>
-          <p id='attended'>December 2021 - November 2022</p>
-        </div>
-
-        <div class="experience-item">
-          <h2>Postdoctoral Research Scholar</h2>
-          <h3>Columbia University in the City of New York</h3>
-          <p id='supervisor'><strong>Supervisor:</strong> Pierre Gentine</p>
-          <p> I focused on the 2020 Siberian heatwave. Positive temperature anomalies over Siberia caused early
-            snowmelt, leading
-            to substantial earlier vegetation greening accompanied by decreased soil moisture and browning in the
-            summer. </p>
-          <p id='attended'>March 2020 - November 2021</p>
-        </div>
-      </div> <!-- experience-inner-grid close -->
-    </div> <!-- experience-inner close -->
-  </div> <!-- experience close -->
-
-
-  <!-- education -->
-  <div class="education" id="education">
-    <div class="education-inner">
-      <h1><span class="gray-hash">#</span> Education</h1>
-      <div class="education-inner-grid">
-
-        <div class="education-item">
-          <h2>Doctor of Philosophy</h2>
-          <h3>Columbia Univesity / Lamont-Doherty Earth Observatory</h3>
-          <h4>Department of Earth and Environmental Science</h4>
-          <p id='supervisor'><strong>Supervisor:</strong> Galen McKinley</p>
-          <p id='thesis'><strong>Title:</strong>
-            <a href='https://academiccommons.columbia.edu/doi/10.7916/d8-j3p1-tf92'>Global Ocean Carbon Dioxide Flux
-              Mapping Techniques: Evaluation,
-              Development, and Discrepancies
-            </a>
+          <p>
+            I am an Associate Research Scientist at Yale University. My research
+            focuses on the global carbon cycle, particularly air-sea CO<sub
+              >2</sub
+            >
+            fluxes. I combine biogeochemical models, observational datasets, and
+            machine learning to quantify both historical fluxes and those
+            associated with ocean-based carbon dioxide removal interventions.
+            Currently, I am investigating the sources of uncertainty in air-sea
+            CO<sub>2</sub> fluxes, with a focus on how biological and physical
+            processes shape the spatial patterns of nutrients and
+            pCO<sub>2</sub>, and how these patterns evolve under changing
+            climate and ecosystems. I also study GHG emissions accounting and
+            stocktaking as tools to evaluate mitigation effectiveness. I am
+            committed to open science, ensuring that my data and results are
+            accessible and reproducible.
           </p>
-          <p id='attended'>2017-2020</p>
         </div>
+      </div>
+      <!-- hero-inner close -->
+    </div>
+    <!-- hero close -->
 
-        <div class="education-item">
-          <h2>Master of Science</h2>
-          <h3>University of Wisconsin - Madison</h3>
-          <h4>Department of Oceanic and Atmospher Sciences</h4>
-          <p id='supervisor'><strong>Supervisor:</strong> Galen McKinley</p>
-          <p id='thesis'><strong>Title:</strong>
-            <a href='https://www.aos.wisc.edu/aosjournal/Volume30/Gloege_MS.pdf'>
-              <p> Global Evaluation of Particulate
-                Organic Carbon Parameterizations and Implications for Atmospheric pCO<sub>2</sub>
+    <!-- Experience -->
+    <div class="experience" id="experience">
+      <div class="experience-inner">
+        <h1><span class="gray-hash">#</span> Experience</h1>
+        <div class="experience-inner-grid">
+          <div class="experience-item">
+            <h2>Associate Research Scientist</h2>
+            <h3>Yale University / Yale Center for Natural Carbon Capture</h3>
+            <p></p>
+            <p id="attended">January 2025 - Present</p>
+          </div>
+
+          <div class="experience-item">
+            <h2>Postdoctoral Research Associate</h2>
+            <h3>Yale University</h3>
+            <p id="supervisor"><strong>Supervisor:</strong> Matthew Eisaman</p>
+            <p>
+              My research focused on quantifying uncertainty air-sea CO2 flux
+            </p>
+            <p id="attended">January 2024 - December 2024</p>
+          </div>
+
+          <div class="experience-item">
+            <h2>Climate Data Engineer</h2>
+            <h3>Open Earth Foundation</h3>
+            <p id="supervisor"><strong>Supervisor:</strong> Evan Prodromou</p>
+            <p>
+              I collaborated on open source projects including a climate
+              accounting system and an app to help cities track their emissions.
+            </p>
+            <p id="attended">November 2022 - December 2023</p>
+          </div>
+
+          <div class="experience-item">
+            <h2>NASA Postdoctoral Fellow</h2>
+            <h3>NASA Goddard Institute for Space Studies</h3>
+            <p id="supervisor">
+              <strong>Supervisor:</strong> Anastasia Romanou
+            </p>
+            <p>
+              My research focuses on understanding changes in the ocean carbon
+              cycle using coupled ocean-atmosphere models and machine learning.
+            </p>
+            <p id="attended">December 2021 - November 2022</p>
+          </div>
+
+          <div class="experience-item">
+            <h2>Postdoctoral Research Scholar</h2>
+            <h3>Columbia University in the City of New York</h3>
+            <p id="supervisor"><strong>Supervisor:</strong> Pierre Gentine</p>
+            <p>
+              I focused on the 2020 Siberian heatwave. Positive temperature
+              anomalies over Siberia caused early snowmelt, leading to
+              substantial earlier vegetation greening accompanied by decreased
+              soil moisture and browning in the summer.
+            </p>
+            <p id="attended">March 2020 - November 2021</p>
+          </div>
+        </div>
+        <!-- experience-inner-grid close -->
+      </div>
+      <!-- experience-inner close -->
+    </div>
+    <!-- experience close -->
+
+    <!-- education -->
+    <div class="education" id="education">
+      <div class="education-inner">
+        <h1><span class="gray-hash">#</span> Education</h1>
+        <div class="education-inner-grid">
+          <div class="education-item">
+            <h2>Doctor of Philosophy</h2>
+            <h3>Columbia Univesity / Lamont-Doherty Earth Observatory</h3>
+            <h4>Department of Earth and Environmental Science</h4>
+            <p id="supervisor"><strong>Supervisor:</strong> Galen McKinley</p>
+            <p id="thesis">
+              <strong>Title:</strong>
+              <a
+                href="https://academiccommons.columbia.edu/doi/10.7916/d8-j3p1-tf92"
+                >Global Ocean Carbon Dioxide Flux Mapping Techniques:
+                Evaluation, Development, and Discrepancies
+              </a>
+            </p>
+            <p id="attended">2017-2020</p>
+          </div>
+
+          <div class="education-item">
+            <h2>Master of Science</h2>
+            <h3>University of Wisconsin - Madison</h3>
+            <h4>Department of Oceanic and Atmospher Sciences</h4>
+            <p id="supervisor"><strong>Supervisor:</strong> Galen McKinley</p>
+            <p id="thesis">
+              <strong>Title:</strong>
+              <a
+                href="https://www.aos.wisc.edu/aosjournal/Volume30/Gloege_MS.pdf"
+              >
+                <p>
+                  Global Evaluation of Particulate Organic Carbon
+                  Parameterizations and Implications for Atmospheric pCO<sub
+                    >2</sub
+                  >
+                </p>
+              </a>
+            </p>
+            <p id="attended">2014-2017</p>
+          </div>
+
+          <div class="education-item">
+            <h2>Master of Science</h2>
+            <h3>University of Minnesota - Duluth</h3>
+            <h4>Water Resources Sciences</h4>
+            <p id="supervisor"><strong>Supervisor:</strong> Jay Austin</p>
+            <p id="thesis">
+              <strong>Title:</strong>
+              <a href="https://conservancy.umn.edu/handle/11299/166770"
+                >Modeling near-inertial waves in Lake Superior
+              </a>
+            </p>
+            <p id="attended">2012-2014</p>
+          </div>
+
+          <div class="education-item">
+            <h2>Bachelor of Science</h2>
+            <h3>University of Minnesota - Duluth</h3>
+            <h4>Physics / Mathematics</h4>
+            <p id="attended">2007-2012</p>
+          </div>
+        </div>
+        <!-- education-inner-grid close -->
+      </div>
+      <!-- education-inner close -->
+    </div>
+    <!-- education close -->
+
+    <!-- publications -->
+    <div class="publications" id="publications">
+      <div class="publications-inner">
+        <div class="publications-item">
+          <h1><span class="gray-hash">#</span> Publications</h1>
+
+          <ol reversed class="references">
+            <li>
+              <p>
+                <b>Gloege, Lucas</b> and Eisaman, M. D. (2025). Regional
+                uncertainty analysis in the air–sea CO2 flux.
+                <i>EEarth and Space Science</i>
+                12(6):e2024EA004032
+                <a target="_blank" href="https://doi.org/10.5194/essd-2025-255"
+                  >https://doi.org/10.5194/essd-2025-255</a
+                >
               </p>
-            </a>
-          </p>
-          <p id='attended'>2014-2017</p>
-        </div>
+            </li>
 
-        <div class="education-item">
-          <h2>Master of Science</h2>
-          <h3>University of Minnesota - Duluth</h3>
-          <h4>Water Resources Sciences</h4>
-          <p id='supervisor'><strong>Supervisor:</strong> Jay Austin</p>
-          <p id='thesis'><strong>Title:</strong>
-            <a href='https://conservancy.umn.edu/handle/11299/166770'>Modeling near-inertial waves in Lake
-              Superior
-            </a>
-          </p>
-          <p id='attended'>2012-2014</p>
-        </div>
+            <li>
+              <p>
+                Jiang, L.-Q., Fay, A., M¨ uller, J. D., Keppler, L., Carroll,
+                D., Lauvset, S. K., DeVries, T., Hauck, J., R¨ odenbeck, C.,
+                Gregor, L., Metzl, N., Fassbender, A. J., Gattuso, J.-P.,
+                Landsch¨ utzer, P., Wanninkhof, R., Sabine, C., Alin, S. R.,
+                Hoppema, M., Olsen, A., Humphreys, M. P., Azetsu-Scott, K.,
+                Bakker, D. C. E., Barbero, L., Bates, N. R., Besemer, N.,
+                Bittig, H. C., Boyd, A. E., Broull´ on, D., Cai, W.-J., Carter,
+                B. R., Chau, T.-T.-T., Chen, C.-T. A., Cyr, F., Dore, J. E.,
+                Enochs, I., Feely, R. A., Garcia, H. E., Gehlen, M.,
+                <b>Gloege, Lucas</b>, Gonz´ alez-D´ avila, M., Gruber, N., Iida,
+                Y., Ishii, M., Kennedy, E., Kozyr, A., Lange, N., Lo Monaco, C.,
+                Manzello, D. P., McKinley, G. A., Monacci, N. M., Padin, X. A.,
+                Palacio-Castro, A. M., P´ erez, F. F., Roobaert, A.,
+                Santana-Casiano, J. M., Sharp, J., Sutton, A., Swift, J.,
+                Tanhua, T., Telszewski, M., Terhaar, J., van Hooidonk, R., Velo,
+                A., Watson, A. J., White, A. E., Wu, Z., Yoo, H., and Zeng, J.
+                (2025). Synthesis of data products for ocean carbonate
+                chemistry.
+                <i>Earth System Science Data Discussions</i>
+                2025:1–72
+                <a target="_blank" href="https://doi.org/10.5194/essd-2025-255"
+                  >https://doi.org/10.5194/essd-2025-255</a
+                >
+              </p>
+            </li>
 
-        <div class="education-item">
-          <h2>Bachelor of Science</h2>
-          <h3>University of Minnesota - Duluth</h3>
-          <h4>Physics / Mathematics</h4>
-          <p id='attended'>2007-2012</p>
-        </div>
-      </div> <!-- education-inner-grid close -->
-    </div> <!-- education-inner close -->
-  </div> <!-- education close -->
+            <li>
+              <p>
+                Heimdal, T. H., McKinley, G. A., Sutton, A. J., Fay, A. R., and
+                <b>Gloege, Lucas</b> (2024). Assessing improvements in global
+                ocean pCO2 machine learning reconstructions with southern ocean
+                autonomous sampling.
+                <i>Biogeosciences</i>
+                21:2159––217
+                <a
+                  target="_blank"
+                  href="https://doi.org/10.5194/bg-21-2159-2024"
+                  >https://doi.org/10.5194/bg-21-2159-2024</a
+                >
+              </p>
+            </li>
 
+            <li>
+              <p>
+                DeVries, T., Yamamoto, K., Wanninkhof, R., Gruber, N., Hauck,
+                J., M¨ uller, J. D., Bopp, L., Carroll, D., Carter, B., Chau,
+                T.-T.-T., Doney, S., Gehlen, M., <b>Gloege, Lucas</b>, Gregor,
+                L., Henson, S., Kim, J. H., Iida, Y., Ilyina, T., Landsch¨
+                utzer, P., Qu´ er ´ e, C. L., Munro, D., Nissen, C., Patara, L.,
+                Perez, F. F., Resplandy, L., Rodgers, K., Schwinger, J., S´ ef´
+                erian, R., Sicardi, V., Terhaar, J., Tri˜ nanes, J., Tsujino,
+                H., Watson, A., Yasunaka, S., and Zeng, J. (2023). Magnitude,
+                trends, and variability of the global ocean carbon sink from
+                1985-2018.
+                <i>GlobalBiogeochemical Cycles</i>
+                e2023GB007780
+                <a target="_blank" href="https://doi.org/10.1029/2023GB007780"
+                  >https://doi.org/10.1029/2023GB007780</a
+                >
+              </p>
+            </li>
 
-  <!-- publications -->
-  <div class="publications" id="publications">
-    <div class="publications-inner">
+            <li>
+              <p>
+                Rodgers, K. B., Schwinger, J., Fassbender, A. J., Landsch¨
+                utzer, P., Yamaguchi, R., Frenzel, H., Stein, K., M¨ uller, J.
+                D., Goris, N., Sharma, S., Bushinsky, S., Chau, T.-T.-T.,
+                Gehlen, M., Gallego, M. A., <b>Gloege, Lucas</b>, Gregor, L.,
+                Gruber, N., Hauck, J., Iida, Y., Ishii, M., Keppler, L., Kim,
+                J.-E., Schlunegger, S., Tjiputra, J., Toyama, K., Ayar, P. V.,
+                and Velo, A. (2023). Seasonal variability of the surface ocean
+                carbon cycle: A synthesis.
+                <i>GlobalBiogeochemical Cycles</i>
+                e2023GB007798
+                <a target="_blank" href="https://doi.org/10.1029/2023GB007798"
+                  >https://doi.org/10.1029/2023GB007798</a
+                >
+              </p>
+            </li>
 
-      <div class="publications-item">
-        <h1><span class="gray-hash">#</span> Publications</h1>
+            <li>
+              <p>
+                Friedlingstein, P., O’sullivan, M., Jones, M., Andrew, R.,
+                Gregor, L., Hauck, J., Le Qu´er´ e, C., Luijkx, I., Olsen, A.,
+                Peters, G., Peters, W., Pongratz, J., Schwingshackl, C., Sitch,
+                S., Canadell, J., Ciais, P., Jackson, R., Alin, S., Alkama, R.,
+                Arneth, A., Arora, V., Bates, N., Becker, M., Bellouin, N.,
+                Bittig, H., Bopp, L., Chevallier, F., Chini, L., Cronin, M.,
+                Evans, W., Falk, S., Feely, R., Gasser, T., Gehlen, M.,
+                Gkritzalis, T., <b>Gloege, Lucas</b>, Grassi, ¨ G., Gruber, N.,
+                G¨ urses, O., Harris, I., Hefner, M., Houghton, R., Hurtt, G.,
+                Iida, Y., Ilyina, T., Jain, A., Jersild, A., Kadono, K., Kato,
+                E., Kennedy, D., Klein Goldewijk, K., Knauer, J., Korsbakken,
+                J., Landsch¨ utzer, P., Lef` evre, N., Lindsay, K., Liu, J.,
+                Liu, Z., Marland, G., Mayot, N., Mcgrath, M., Metzl, N.,
+                Monacci, N., Munro, D., Nakaoka, S., Niwa, Y., O’brien, K., Ono,
+                T., Palmer, P., Pan, N., Pierrot, D., Pocock, K., Poulter, B.,
+                Resplandy, L., Robertson, E., R¨ odenbeck, C., Rodriguez, C.,
+                Rosan, T., Schwinger, J., S´ ef´ erian, R., Shutler, J.,
+                Skjelvan, I., Steinhoff, T., Sun, Q., Sutton, A., Sweeney, C.,
+                Takao, S., Tanhua, T., Tans, P., Tian, X., Tian, H., Tilbrook,
+                B., Tsujino, H., Tubiello, F., Van Der Werf, G., Walker, A.,
+                Wanninkhof, R., Whitehead, C., Willstrand Wranne, A., Wright,
+                R., Yuan, W., Yue, C., Yue, X., Zaehle, S., Zeng, J., and Zheng,
+                B.(2022). Global Carbon Budget 2022
+                <i>Earth System Science Data.</i>
+                14(11):4811–4900
+                <a
+                  target="_blank"
+                  href=" https://doi.org/10.5194/essd-14-4811-2022"
+                >
+                  https://doi.org/10.5194/essd-14-4811-2022</a
+                >
+              </p>
+            </li>
 
-        <ol reversed>
-          <li>
-            <p>
-              Bennington, V.S., <b>Gloege, L.</b>, and McKinley, G.A. (2022)
-              Variability in the global ocean carbon sink from 1959-2020. <i><a target="_blank"
-                  href="https://www.essoar.org/doi/abs/10.1002/essoar.10510815.1">Read it on ESSOArchive</a></i>
-            </p>
-          </li>
+            <li>
+              <p>
+                Bennington, V.S., <b>Gloege, L.</b>, and McKinley, G.A. (2022).
+                Variability in the global ocean carbon sink from 1959-2020 by
+                correcting models with observations.
+                <i>Geophys. Res. Lett.</i>
+                49:e2022GL098632
+                <a target="_blank" href="https://doi.org/10.1029/2022GL098632"
+                  >https://doi.org/10.1029/2022GL098632</a
+                >
+              </p>
+            </li>
 
-          <li>
-            <p>
-              <b>Gloege, Lucas</b>, Kornhuber, K., Skulovich, O., Pal, I., Zhou, S., Ciais, P., and Gentine, P.
-              Land-atmosphere cascade fueled the 2020 siberian heatwave. <i>AGU advances (under review)</i>
-            </p>
-          </li>
+            <li>
+              <p>
+                <b>Gloege, Lucas</b>, Kornhuber, K., Skulovich, O., Pal, I.,
+                Zhou, S., Ciais, P., and Gentine, P. (2022). Land-atmosphere
+                cascade fueled the 2020 siberian heatwave.
+                <i>AGU Advances</i>
+                3(6):e2021AV000619
+                <a target="_blank" href="https://doi.org/10.1029/2021AV000619"
+                  >https://doi.org/10.1029/2021AV000619</a
+                >
+              </p>
+            </li>
 
-          <li>
-            <p>
-              <b>Gloege, Lucas</b>, Yan, M., Zheng, T., and McKinley, G. A. (2022). Improved quantification of ocean
-              carbon
-              uptake by
-              using machine learning to merge global models and pco2 data. <i>Journal of Advances in Modeling Earth
-                Systems</i> 14:e2021MS002620
-              <a target="_blank" href="https://doi.org/10.1029/2021MS002620">https://doi.org/10.1029/2021MS002620</a>
-            </p>
-          </li>
+            <li>
+              <p>
+                <b>Gloege, Lucas</b>, Yan, M., Zheng, T., and McKinley, G. A.
+                (2022). Improved quantification of ocean carbon uptake by using
+                machine learning to merge global models and pco2 data.
+                <i>Journal of Advances in Modeling Earth Systems</i>
+                14:e2021MS002620
+                <a target="_blank" href="https://doi.org/10.1029/2021MS002620"
+                  >https://doi.org/10.1029/2021MS002620</a
+                >
+              </p>
+            </li>
 
-          <li>
-            <p>
-              <b>Gloege, Lucas</b>, McKinley, G. A., Landschu ̈tzer, P., Lovenduski, N. S., Rodgers, K., Fay, A. R.,
-              Fro
-              ̈licher, T., Fyfe, J., Illyina, T., Jones, S., Ro ̈denbeck, C., Schlunegger, S., and Takano, Y. (2021).
-              Quantifying errors in observationally-based estimates of ocean carbon sink variability <i> Global
-                Biogeochemical Cycles</i>, 35:e2020GB006788
-              <a target="_blank" href="https://doi.org/10.1029/2020GB006788">https://doi.org/10.1029/2020GB006788</a>
-            </p>
-          </li>
+            <li>
+              <p>
+                <b>Gloege, Lucas</b>, McKinley, G. A., Landschu ̈tzer, P.,
+                Lovenduski, N. S., Rodgers, K., Fay, A. R., Fro ̈licher, T.,
+                Fyfe, J., Illyina, T., Jones, S., Ro ̈denbeck, C., Schlunegger,
+                S., and Takano, Y. (2021). Quantifying errors in
+                observationally-based estimates of ocean carbon sink variability
+                <i> Global Biogeochemical Cycles</i>, 35:e2020GB006788
+                <a target="_blank" href="https://doi.org/10.1029/2020GB006788"
+                  >https://doi.org/10.1029/2020GB006788</a
+                >
+              </p>
+            </li>
 
+            <li>
+              <p>
+                Stamell, J., Rustagi, R. R., <b>Gloege, Lucas</b>, and McKinley,
+                G. A. (2020). Strengths and weaknesses of three machine learning
+                methods for pCO<sub>2</sub> interpolation.
+                <i>Geoscientific Model Development Discussions</i>, pages 1–25
+                <a target="_blank" href="https://doi.org/10.5194/gmd-2020-311"
+                  >https://doi.org/10.5194/gmd-2020-311</a
+                >
+              </p>
+            </li>
 
-          <li>
-            <p>
-              Stamell, J., Rustagi, R. R., <b>Gloege, Lucas</b>, and McKinley, G. A. (2020). Strengths and weaknesses
-              of three machine learning methods for pCO<sub>2</sub> interpolation. <i>Geoscientific Model Development
-                Discussions</i>, pages 1–25
-              <a target="_blank" href="https://doi.org/10.5194/gmd-2020-311">https://doi.org/10.5194/gmd-2020-311</a>
+            <li>
+              <p>
+                Abell, J. T., Rahimi, S. R., Pullen, A., Lebo, Z. J., Zhang, D.,
+                Kapp, P., <b>Gloege, Lucas</b>, Ridge, S., Nie, J., and
+                Winckler, G. (2020b). Model evidence for the hami basin and
+                possibly other modern stony deserts in asia as dust sources
+                during the plio-pleistocene.
+                <i>Geophysical Research Letters</i>, 47:e2020GL090064
+                <a href="https://doi.org/10.1029/2020GL090064"
+                  >https://doi.org/10.1029/2020GL090064</a
+                >
+              </p>
+            </li>
 
-            </p>
-          </li>
+            <li>
+              <p>
+                McKinley, G. A., Fay, A. R., <b>Gloege, Lucas</b>, and
+                Lovenduski, N. S. (2020). External forcing explains recent
+                decadal variability of the ocean carbon sink.
+                <i>AGU Advances</i>, 1(2):e2019AV000149
+                <a href="https://doi.org/10.1029/2019AV000149"
+                  >https://doi.org/10.1029/2019AV000149</a
+                >
+              </p>
+            </li>
 
-          <li>
-            <p>Abell, J. T., Rahimi, S. R., Pullen, A., Lebo, Z. J., Zhang, D., Kapp, P., <b>Gloege, Lucas</b>, Ridge,
-              S., Nie, J., and Winckler, G. (2020b). Model evidence for the hami basin and possibly other modern stony
-              deserts in
-              asia as dust sources during the plio-pleistocene. <i>Geophysical Research Letters</i>, 47:e2020GL090064
-              <a href="https://doi.org/10.1029/2020GL090064">https://doi.org/10.1029/2020GL090064</a>
-            </p>
-          </li>
+            <li>
+              <p>
+                <b>Gloege, Lucas</b>, McKinley, G. A., Mooney, R., Allan, J.,
+                Diebel, M., and McIntyre, P. (2020). Lake hydrodynamics
+                intensify the potential impact of watershed pollutants on
+                coastal ecosystem services.
+                <i>Environmental Research Letters</i>, 15(6):064028
+                <a href="https://doi.org/10.1088/1748-9326/ab7f62"
+                  >https://doi.org/10.1088/1748-9326/ab7f62</a
+                >
+              </p>
+            </li>
 
-          <li>
-            <p>McKinley, G. A., Fay, A. R., <b>Gloege, Lucas</b>, and Lovenduski, N. S. (2020). External forcing
-              explains recent decadal variability of the ocean carbon sink. <i>AGU Advances</i>, 1(2):e2019AV000149
-              <a href="https://doi.org/10.1029/2019AV000149">https://doi.org/10.1029/2019AV000149</a>
-            </p>
-          </li>
+            <li>
+              <p>
+                Abell, J. T., Pullen, A., Lebo, Z. J., Kapp, P.,
+                <b>Gloege, Lucas</b>, Metcalf, A. R., Nie, J., and Winckler, G.
+                (2020a). A wind-albedo-wind feedback driven by landscape
+                evolution. <i>Nature Communications</i>, 11(1):1–9
+                <a href="https://doi.org/10.1038/s41467-019-13661-w"
+                  >https://doi.org/10.1038/s41467-019-13661-w</a
+                >
+              </p>
+            </li>
 
+            <li>
+              <p>
+                <b>Gloege, Lucas</b>, McKinley, G. A., Mouw, C. B., and
+                Ciochetto, A. B. (2017). Global evaluation of particulate
+                organic carbon flux parameterizations and implications for
+                atmospheric pCO<sub>2</sub>.
+                <i>Global Biogeochemical Cycles</i>, 31(7):1192–1215
+                <a href="https://doi.org/10.1002/2016GB005535"
+                  >https://doi.org/10.1002/2016GB005535</a
+                >
+              </p>
+            </li>
 
-          <li>
-            <p><b>Gloege, Lucas</b>, McKinley, G. A., Mooney, R., Allan, J., Diebel, M., and McIntyre, P. (2020). Lake
-              hydrodynamics intensify the potential impact of watershed pollutants on coastal ecosystem services.
-              <i>Environmental Research Letters</i>, 15(6):064028
-              <a href="https://doi.org/10.1088/1748-9326/ab7f62">https://doi.org/10.1088/1748-9326/ab7f62</a>
-            </p>
-          </li>
+            <li>
+              <p>
+                Mouw, C. B., Barnett, A., McKinley, G. A., <b>Gloege, Lucas</b>,
+                and Pilcher, D. (2016b). Phytoplankton size impact on export
+                flux in the global ocean. <i>Global Biogeochemical Cycles</i>,
+                30(10):1542–1562
+                <a href="https://doi.org/10.1002/2015GB005355"
+                  >https://doi.org/10.1002/2015GB005355</a
+                >
+              </p>
+            </li>
 
+            <li>
+              <p>
+                Mouw, C. B., Barnett, A., McKinley, G. A., <b>Gloege, Lucas</b>,
+                and Pilcher, D. (2016a). Global ocean particulate organic carbon
+                flux merged with satellite parameters.
+                <i>Earth System Science Data,</i>
+                8(2):531–541
+                <a href="https://doi.org/10.5194/essd-8-531-2016"
+                  >https://doi.org/10.5194/essd-8-531-2016</a
+                >
+              </p>
+            </li>
+          </ol>
 
-          <li>
-            <p>Abell, J. T., Pullen, A., Lebo, Z. J., Kapp, P., <b>Gloege, Lucas</b>, Metcalf, A. R., Nie, J., and
-              Winckler, G. (2020a). A wind-albedo-wind feedback driven by landscape evolution. <i>Nature
-                Communications</i>,
-              11(1):1–9
-              <a href="https://doi.org/10.1038/s41467-019-13661-w">https://doi.org/10.1038/s41467-019-13661-w</a>
-            </p>
-          </li>
-
-          <li>
-            <p><b>Gloege, Lucas</b>, McKinley, G. A., Mouw, C. B., and Ciochetto, A. B. (2017). Global evaluation of
-              particulate organic carbon flux parameterizations and implications for atmospheric pCO<sub>2</sub>.
-              <i>Global Biogeochemical Cycles</i>, 31(7):1192–1215
-              <a href="https://doi.org/10.1002/2016GB005535">https://doi.org/10.1002/2016GB005535</a>
-            </p>
-          </li>
-
-          <li>
-            <p>Mouw, C. B., Barnett, A., McKinley, G. A., <b>Gloege, Lucas</b>, and Pilcher, D. (2016b). Phytoplankton
-              size impact on export flux in the global ocean. <i>Global Biogeochemical Cycles</i>, 30(10):1542–1562
-              <a href="https://doi.org/10.1002/2015GB005355">https://doi.org/10.1002/2015GB005355</a>
-            </p>
-          </li>
-
-
-          <li>
-            <p>Mouw, C. B., Barnett, A., McKinley, G. A., <b>Gloege, Lucas</b>, and Pilcher, D. (2016a). Global ocean
-              particulate organic carbon flux merged with satellite parameters. <i>Earth System Science Data,</i>
-              8(2):531–541
-              <a href="https://doi.org/10.5194/essd-8-531-2016">https://doi.org/10.5194/essd-8-531-2016</a>
-            </p>
-          </li>
-        </ol>
-
-        <!--
+          <!--
         <div>
           <a id=arxiv href='https://bafybeihestm2jcitc4qk7jw7vq2huhbxmxwfgrivbhzagzyfcsiufgxesy.ipfs.dweb.link'>Personal
             arXiv</a>
         </div>
-        -->
-
-
+        --></div>
       </div>
-    </div> <!-- publication-inner close -->
-  </div> <!-- publication close -->
+      <!-- publication-inner close -->
+    </div>
+    <!-- publication close -->
 
-
-  <!-- Relevant work
+    <!-- Relevant work
   <div class="research" id="research">
 
     <div class="research-inner">
@@ -386,7 +591,7 @@
   </div>
   -->
 
-  <!-- other writing
+    <!-- other writing
   <div class="other-writing" id="other-writing">
     <div class="other-writing-inner">
       <div class="other-writing-item">
@@ -398,7 +603,7 @@
   </div>
   -->
 
-  <!-- features
+    <!-- features
   <div class="features">
     <div class="features-inner">
       <div class="feature-item">
@@ -430,17 +635,19 @@
       </div>
     </div>
   </div>
+  Hosted on
+        <a href="https://ipfs.io/" target="_blank">IPFS</a>. 
  -->
 
-  <!-- footer -->
-  <div class="footer">
-    <p>&copy; Copyright 2022. Hosted on <a href="https://ipfs.io/" target="_blank">IPFS</a>.
-      Designed by Luke Gloege. Updated January 2022.</p>
-  </div>
+    <!-- footer -->
+    <div class="footer">
+      <p>
+        &copy; Copyright 2025. Designed by Luke Gloege. Last Updated: October
+        2025.
+      </p>
+    </div>
 
-  <!-- Javscripts -->
-  <script type="text/javascript" src="./javascript/scripts.js"></script>
-
-</body>
-
+    <!-- Javscripts -->
+    <script type="text/javascript" src="./javascript/scripts.js"></script>
+  </body>
 </html>
